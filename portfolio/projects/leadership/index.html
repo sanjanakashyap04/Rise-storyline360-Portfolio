@@ -191,6 +191,63 @@
     color: #666E78;
     margin-top: 28px;
   }
+```css
+  .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 38px;
+  }
+
+  .screenshot-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #E1E3E6;
+    box-shadow: 0 5px 20px rgba(23, 32, 51, 0.06);
+    transition: 0.2s ease;
+  }
+
+  .screenshot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(23, 32, 51, 0.10);
+  }
+
+  .screenshot-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #E1E3E6;
+  }
+
+  .screenshot-content {
+    padding: 22px 24px 25px;
+  }
+
+  .screenshot-content span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: #2A7F7B;
+    font-weight: bold;
+  }
+
+  .screenshot-content h3 {
+    margin: 8px 0 8px;
+  }
+
+  .screenshot-content p {
+    margin: 0;
+    color: #5B626C;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 800px) {
+    .screenshot-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+```
 
   footer {
     background: #172033;
@@ -483,29 +540,158 @@
   </section>
 
 
-  <!-- SCREENSHOTS -->
-  <section class="screenshots">
-    <div class="container">
+ ```html
+<!-- SCREENSHOTS -->
+<section class="screenshots">
+  <div class="container">
 
-      <h2>Learning Experience Preview</h2>
+    <h2>Learning Experience Preview</h2>
 
-      <p class="intro">
-        Selected screenshots will showcase the learner experience,
-        branching interactions and Storyline integration.
-      </p>
+    <p class="intro">
+      A visual walkthrough of the learning experience, from the Rise 360
+      course structure through Storyline-based decision-making and
+      personalised reflection.
+    </p>
 
-      <div class="screenshot-placeholder">
-        <strong>Screenshots coming soon</strong>
-        <br><br>
-        Rise 360 course overview · Branching decision ·
-        Storyline interaction · Consequence feedback ·
-        Personalised summary
+    <div class="screenshot-gallery">
+
+      <!-- 01 -->
+      <div class="screenshot-card">
+        <a href="images/01-rise-course-cover.png" target="_blank">
+          <img
+            src="images/01-rise-course-cover.png"
+            alt="Leadership Readiness Pathway Rise 360 course cover"
+          >
+        </a>
+        <div class="screenshot-content">
+          <span>01 · Course Introduction</span>
+          <h3>Leadership Readiness Pathway</h3>
+          <p>
+            The course entry point introduces the learner to the leadership
+            readiness experience and establishes the scenario-based learning context.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 02 -->
+      <div class="screenshot-card">
+        <a href="images/02-rise-course-overview.png" target="_blank">
+          <img
+            src="images/02-rise-course-overview.png"
+            alt="Leadership Readiness Pathway course overview in Rise 360"
+          >
+        </a>
+        <div class="screenshot-content">
+          <span>02 · Learning Architecture</span>
+          <h3>Course Overview</h3>
+          <p>
+            The Rise 360 structure organizes the learning journey and gives
+            learners a clear view of the experience.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 03 -->
+      <div class="screenshot-card">
+        <a href="images/03-storyline-integration.png" target="_blank">
+          <img
+            src="images/03-storyline-integration.png"
+            alt="Storyline 360 interaction embedded within Rise 360"
+          >
+        </a>
+        <div class="screenshot-content">
+          <span>03 · Rise + Storyline</span>
+          <h3>Storyline Integration</h3>
+          <p>
+            An interactive Storyline experience is embedded directly within
+            the Rise 360 course to support deeper scenario-based interaction.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 04 -->
+      <div class="screenshot-card">
+        <a href="images/04-storyline-story-view.png" target="_blank">
+          <img
+            src="images/04-storyline-story-view.png"
+            alt="Storyline 360 Story View showing scenario structure"
+          >
+        </a>
+        <div class="screenshot-content">
+          <span>04 · Development</span>
+          <h3>Storyline Story View</h3>
+          <p>
+            The Story View demonstrates the underlying scenario structure,
+            including the sequence of scenes and interactive decision points.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 05 -->
+      <div class="screenshot-card">
+        <a href="images/05-decision-point.png" target="_blank">
+          <img
+            src="images/05-decision-point.png"
+            alt="Leadership scenario decision point"
+          >
+        </a>
+        <div class="screenshot-content">
+          <span>05 · Scenario Interaction</span>
+          <h3>Decision Point</h3>
+          <p>
+            Learners are placed in a realistic leadership situation and must
+            choose how they would respond rather than simply recall information.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 06 -->
+      <div class="screenshot-card">
+        <a href="images/06-reflection-decision-variable.png" target="_blank">
+          <img
+            src="images/06-reflection-decision-variable.png"
+            alt="Reflection slide using decision variables in Storyline 360"
+          >
+        </a>
+        <div class="screenshot-content">
+          <span>06 · Personalised Reflection</span>
+          <h3>Reflection &amp; Decision Variable</h3>
+          <p>
+            The learner's earlier decision is carried forward using variables,
+            allowing the reflection experience to respond to the learner's path.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 07 -->
+      <div class="screenshot-card">
+        <a href="images/07-trigger-based-response.png" target="_blank">
+          <img
+            src="images/07-trigger-based-response.png"
+            alt="Storyline trigger-based learner response"
+          >
+        </a>
+        <div class="screenshot-content">
+          <span>07 · Interaction Logic</span>
+          <h3>Trigger-Based Response</h3>
+          <p>
+            Storyline triggers control the learner's experience and demonstrate
+            how interaction logic is used to create responsive learning paths.
+          </p>
+        </div>
       </div>
 
     </div>
-  </section>
 
-
+  </div>
+</section>
+```
   <!-- LAUNCH -->
   <section>
     <div class="container">
