@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF 8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sanjana Kashyap | Instructional Design Portfolio</title>
@@ -50,16 +50,16 @@
     }
 
     .hero-title {
-      font-size: 22px;
-      color: #DDE3E8;
-      margin: 0 0 22px;
-      max-width: 700px;
+      font-size: 23px;
+      color: #E1E7EA;
+      margin: 0 0 24px;
+      max-width: 760px;
     }
 
     .hero-description {
-      font-size: 18px;
-      color: #BFC8D2;
-      max-width: 760px;
+      font-size: 19px;
+      color: #C2CBD4;
+      max-width: 780px;
       margin: 0;
     }
 
@@ -73,14 +73,14 @@
       font-size: 36px;
       line-height: 1.2;
       color: #172033;
-      margin: 0 0 15px;
+      margin: 0 0 16px;
     }
 
     .section-intro {
-      max-width: 760px;
+      max-width: 780px;
       font-size: 18px;
       color: #59616B;
-      margin-bottom: 40px;
+      margin: 0 0 40px;
     }
 
     /* PROJECTS */
@@ -151,24 +151,13 @@
       transform: translateY(-1px);
     }
 
-    .button-secondary {
-      background: transparent;
-      color: #2A7F7B;
-      border: 1px solid #2A7F7B;
-    }
-
-    .button-secondary:hover {
-      background: #E8F1F0;
-      color: #236B68;
-    }
-
-    /* PROJECT STATUS */
+    /* STATUS */
 
     .status {
       display: inline-block;
       width: fit-content;
-      margin-bottom: 18px;
-      padding: 5px 11px;
+      margin-top: auto;
+      padding: 6px 12px;
       border-radius: 20px;
       background: #E8F1F0;
       color: #236B68;
@@ -176,11 +165,39 @@
       font-weight: bold;
     }
 
-    /* APPROACH */
+    /* CAPABILITIES */
 
-    .approach {
+    .capabilities {
       background: #E8EAED;
     }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .capability-card {
+      background: white;
+      border: 1px solid #E1E3E6;
+      border-radius: 12px;
+      padding: 27px;
+      border-top: 3px solid #2A7F7B;
+    }
+
+    .capability-card h3 {
+      color: #172033;
+      font-size: 21px;
+      margin: 0 0 10px;
+    }
+
+    .capability-card p {
+      color: #59616B;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* DESIGN APPROACH */
 
     .approach-grid {
       display: grid;
@@ -193,12 +210,20 @@
       border: 1px solid #E1E3E6;
       border-radius: 12px;
       padding: 27px;
+      box-shadow: 0 4px 16px rgba(23, 32, 51, 0.04);
+    }
+
+    .approach-number {
+      font-size: 13px;
+      color: #2A7F7B;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .approach-card h3 {
       color: #172033;
       font-size: 20px;
-      margin: 0 0 10px;
+      margin: 8px 0 10px;
     }
 
     .approach-card p {
@@ -207,15 +232,66 @@
       font-size: 15px;
     }
 
-    /* CTA */
+    /* PROCESS */
 
-    .closing {
-      text-align: center;
+    .process {
+      background: #E8EAED;
     }
 
-    .closing .section-intro {
-      margin-left: auto;
-      margin-right: auto;
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .process-step {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #E1E3E6;
+    }
+
+    .process-step strong {
+      color: #2A7F7B;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .process-step h3 {
+      color: #172033;
+      margin: 8px 0 8px;
+      font-size: 20px;
+    }
+
+    .process-step p {
+      color: #59616B;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2A7F7B;
+      font-weight: bold;
+    }
+
+    .about-content p {
+      color: #4F5761;
+      font-size: 17px;
+      margin-top: 0;
+      margin-bottom: 18px;
     }
 
     /* FOOTER */
@@ -236,12 +312,19 @@
       }
 
       .projects,
-      .approach-grid {
+      .capability-grid,
+      .approach-grid,
+      .process-grid,
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
       .hero {
         padding: 70px 0 80px;
+      }
+
+      .about-grid {
+        gap: 25px;
       }
     }
   </style>
@@ -255,6 +338,7 @@
   <header class="hero">
     <div class="container">
 
+```
   <div class="eyebrow">
     Instructional Design Portfolio
   </div>
@@ -264,36 +348,39 @@
   </h1>
 
   <p class="hero-title">
-    Instructional Designer / Learning Experience Designer
+    Instructional Designer · Learning Experience Designer
   </p>
 
   <p class="hero-description">
-    Designing scenario-based learning experiences that help learners
-    practice judgment, make decisions, and apply skills in realistic
-    workplace situations.
+    Designing practical, scenario based learning experiences that help
+    people make better decisions, apply new skills, and perform with
+    confidence.
   </p>
 
 </div>
+```
 
   </header>
 
-  <!-- FEATURED PROJECTS -->
+  <!-- FEATURED WORK -->
 
   <section>
     <div class="container">
 
-  <h2>Featured Projects</h2>
+```
+  <h2>
+    Selected Instructional Design Work
+  </h2>
 
   <p class="section-intro">
-    Explore selected instructional design work, from learning
-    architecture and storyboarding through interactive eLearning
-    development.
+    Explore learning experiences that demonstrate my approach to
+    curriculum architecture, scenario design, storyboarding, and
+    interactive eLearning development.
   </p>
-
 
   <div class="projects">
 
-    <!-- LEADERSHIP PROJECT -->
+    <!-- LEADERSHIP -->
 
     <div class="project-card">
 
@@ -306,9 +393,9 @@
       </h3>
 
       <p>
-        A scenario-based leadership learning experience built in
+        A scenario based leadership learning experience built in
         Rise 360 with Storyline 360. The pathway develops practical
-        judgment for promotion-track individual contributors preparing
+        judgment for promotion track individual contributors preparing
         to step into leadership.
       </p>
 
@@ -322,7 +409,7 @@
     </div>
 
 
-    <!-- NEXATECH PROJECT -->
+    <!-- NEXATECH -->
 
     <div class="project-card">
 
@@ -349,65 +436,80 @@
   </div>
 
 </div>
+```
 
   </section>
 
-  <!-- DESIGN APPROACH -->
+  <!-- CAPABILITIES -->
 
-  <section class="approach">
+  <section class="capabilities">
 
+```
 <div class="container">
 
   <h2>
-    Design Approach
+    What I Do
   </h2>
 
   <p class="section-intro">
-    My approach focuses on creating learning experiences that move
-    beyond information delivery and give learners opportunities to
-    practice the decisions they will need to make on the job.
+    I combine my background in teaching and curriculum development
+    with instructional design practices to create purposeful digital
+    learning experiences.
   </p>
 
+  <div class="capability-grid">
 
-  <div class="approach-grid">
-
-    <div class="approach-card">
+    <div class="capability-card">
 
       <h3>
-        Scenario-Based Learning
+        Learning Experience Design
       </h3>
 
       <p>
-        Learners work through realistic situations and make decisions
-        rather than relying only on recall-based questions.
+        Designing learning journeys around clear objectives, learner
+        needs, meaningful practice, and real world application.
       </p>
 
     </div>
 
 
-    <div class="approach-card">
+    <div class="capability-card">
 
       <h3>
-        Meaningful Interaction
+        Scenario Based eLearning
       </h3>
 
       <p>
-        Interactive elements are used to create opportunities for
-        learners to evaluate options and experience consequences.
+        Creating realistic situations where learners practice judgment,
+        make decisions, and experience the consequences of their choices.
       </p>
 
     </div>
 
 
-    <div class="approach-card">
+    <div class="capability-card">
 
       <h3>
-        Learning by Design
+        Curriculum and Storyboard Design
       </h3>
 
       <p>
-        Learning objectives, instructional strategy, storyboards and
-        development are connected throughout the design process.
+        Translating learning goals into structured curriculum maps,
+        storyboards, interactions, and assessment opportunities.
+      </p>
+
+    </div>
+
+
+    <div class="capability-card">
+
+      <h3>
+        Interactive Development
+      </h3>
+
+      <p>
+        Building interactive learning experiences using Articulate
+        Rise 360 and Storyline 360.
       </p>
 
     </div>
@@ -415,20 +517,251 @@
   </div>
 
 </div>
+```
 
   </section>
 
+  <!-- DESIGN APPROACH -->
+
+  <section>
+
+```
+<div class="container">
+
+  <h2>
+    Design Approach
+  </h2>
+
+  <p class="section-intro">
+    I design for what learners need to do, not just what they need
+    to know. My approach combines the structure of curriculum design
+    with the practical focus of workplace learning.
+  </p>
+
+  <div class="approach-grid">
+
+    <div class="approach-card">
+
+      <div class="approach-number">
+        01
+      </div>
+
+      <h3>
+        Start with the Learning Problem
+      </h3>
+
+      <p>
+        Identify the performance need before deciding on the learning
+        solution.
+      </p>
+
+    </div>
+
+
+    <div class="approach-card">
+
+      <div class="approach-number">
+        02
+      </div>
+
+      <h3>
+        Design for Practice
+      </h3>
+
+      <p>
+        Give learners opportunities to apply judgment, make decisions,
+        and work through realistic situations.
+      </p>
+
+    </div>
+
+
+    <div class="approach-card">
+
+      <div class="approach-number">
+        03
+      </div>
+
+      <h3>
+        Make Interaction Meaningful
+      </h3>
+
+      <p>
+        Use branching, feedback, consequences, and reflection when
+        they support the learning goal.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- DESIGN PROCESS -->
+
+  <section class="process">
+
+```
+<div class="container">
+
+  <h2>
+    My Design Process
+  </h2>
+
+  <p class="section-intro">
+    I connect learning needs, instructional strategy, and development
+    throughout the design process.
+  </p>
+
+  <div class="process-grid">
+
+    <div class="process-step">
+
+      <strong>
+        01 · DISCOVER
+      </strong>
+
+      <h3>
+        Understand
+      </h3>
+
+      <p>
+        Identify the audience, performance need, and learning goals.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <strong>
+        02 · DESIGN
+      </strong>
+
+      <h3>
+        Structure
+      </h3>
+
+      <p>
+        Build the learning architecture, objectives, scenarios,
+        and storyboard.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <strong>
+        03 · DEVELOP
+      </strong>
+
+      <h3>
+        Build
+      </h3>
+
+      <p>
+        Turn the design into an interactive learning experience using
+        Rise 360 and Storyline 360.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <strong>
+        04 · REFLECT
+      </strong>
+
+      <h3>
+        Refine
+      </h3>
+
+      <p>
+        Review the learner experience and refine the design based
+        on what the interaction is meant to accomplish.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section>
+
+```
+<div class="container">
+
+  <div class="about-grid">
+
+    <div>
+      <div class="about-label">
+        About Me
+      </div>
+
+      <h2>
+        From classroom learning to digital learning experiences.
+      </h2>
+    </div>
+
+
+    <div class="about-content">
+
+      <p>
+        I hold a B.Sc. and M.Sc. in Zoology and a B.Ed., and I bring
+        professional experience in teaching and curriculum development.
+      </p>
+
+      <p>
+        My work in education has given me a strong foundation in
+        understanding learners, structuring learning experiences,
+        and translating complex ideas into accessible instruction.
+      </p>
+
+      <p>
+        I am now transitioning into instructional design, bringing
+        that foundation into the design of digital and workplace
+        learning experiences.
+      </p>
+
+      <p>
+        My portfolio focuses on scenario based learning, curriculum
+        architecture, interactive eLearning, and thoughtful learner
+        practice. I am particularly interested in creating learning
+        experiences that are purposeful, practical, and connected to
+        what learners actually need to do.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
 
   <!-- FOOTER -->
 
   <footer>
 
+```
 <div class="container">
   Sanjana Kashyap · Instructional Design Portfolio
 </div>
+```
 
   </footer>
 
 </body>
 </html>
-
