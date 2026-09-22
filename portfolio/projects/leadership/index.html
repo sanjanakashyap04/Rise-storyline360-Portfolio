@@ -247,6 +247,37 @@
     }
   }
 ```
+  .artifact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .artifact-card {
+    background: white;
+    padding: 27px;
+    border-radius: 12px;
+    border: 1px solid #E1E3E6;
+    border-top: 3px solid #2A7F7B;
+    box-shadow: 0 4px 16px rgba(23, 32, 51, 0.04);
+  }
+
+  .artifact-card p {
+    color: #5B626C;
+  }
+
+  .artifact-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #236B68;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .artifact-link:hover {
+    text-decoration: underline;
+  }
 
   footer {
     background: #172033;
@@ -261,10 +292,11 @@
     }
 
     .meta-grid,
-    .design-grid,
-    .process {
-      grid-template-columns: 1fr;
-    }
+.design-grid,
+.process,
+.artifact-grid {
+  grid-template-columns: 1fr;
+}
   }
 </style>
 </head>
@@ -697,6 +729,57 @@
         </div>
       </div>
 
+
+    </div>
+
+  </div>
+</section> 
+  <!-- DESIGN ARTIFACTS -->
+<section>
+  <div class="container">
+
+    <h2>Design Artifacts</h2>
+
+    <p class="intro">
+      Supporting documentation showing the instructional design process
+      behind the Leadership Readiness Pathway.
+    </p>
+
+    <div class="artifact-grid">
+
+      <div class="artifact-card">
+        <h3>Curriculum Map</h3>
+
+        <p>
+          Documents the overall learning architecture, module structure,
+          and progression.
+        </p>
+
+        <a
+          class="artifact-link"
+          href="documents/leadership-readiness-curriculum-map.pdf"
+          target="_blank"
+        >
+          View Curriculum Map →
+        </a>
+      </div>
+
+      <div class="artifact-card">
+        <h3>Storyboard</h3>
+
+        <p>
+          Shows the detailed scenario, interaction, feedback, and
+          reflection design.
+        </p>
+
+        <a
+          class="artifact-link"
+          href="documents/modules-2-4%20Storyboard-outlines.pdf"
+          target="_blank"
+        >
+          View Storyboard →
+        </a>
+      </div>
 
     </div>
 
