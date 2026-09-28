@@ -26,7 +26,44 @@
       margin: auto;
     }
 
-    /* HERO */
+    /* NAVIGATION */
+
+.site-nav {
+  background: #172033;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  position: relative;
+  z-index: 10;
+}
+
+.nav-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #C2CBD4;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}/* HERO */
 
     .hero {
       background: #172033;
@@ -239,11 +276,28 @@
     }
 
     .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: 35px;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 35px;
+  position: relative;
+}
+
+.process-grid::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #AFC7C5;
+  z-index: 0;
+}
+
+.process-step {
+  position: relative;
+  z-index: 1;
+}
 
     .process-step {
       background: white;
@@ -306,22 +360,67 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 800px) {
-      h1 {
-        font-size: 42px;
-      }
+   @media (max-width: 800px) {
+  h1 { font-size: 42px; }
 
-      .projects,
-      .capability-grid,
-      .approach-grid,
-      .process-grid,
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
+  .projects,
+  .capability-grid,
+  .approach-grid,
+  .process-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero { padding: 70px 0 80px; }
+
+  .about-grid { gap: 25px; }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .process-grid::before {
+    display: none;
+  }
+}
 
       .hero {
-        padding: 70px 0 80px;
-      }
+  background: #172033;
+  color: white;
+  padding: 95px 0 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(175, 199, 197, 0.18);
+  border-radius: 50%;
+  right: -80px;
+  top: 60px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: 1px solid rgba(175, 199, 197, 0.12);
+  border-radius: 50%;
+  right: 40px;
+  top: 120px;
+}
 
       .about-grid {
         gap: 25px;
@@ -332,6 +431,22 @@
 </head>
 
 <body>
+
+  <!-- NAVIGATION -->
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">Sanjana Kashyap</a>
+
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#approach">Approach</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- HERO -->
 
@@ -362,7 +477,7 @@
 
   <!-- FEATURED WORK -->
 
-  <section>
+  <section id="work">
     <div class="container">
 
   <h2>
@@ -438,7 +553,7 @@
 
   <!-- CAPABILITIES -->
 
-  <section class="capabilities">
+  <section id="capabilities" class="capabilities">
 
 <div class="container">
 
@@ -517,7 +632,7 @@
 
   <!-- DESIGN APPROACH -->
 
-  <section>
+ <section id="approach">
 
 <div class="container">
 
@@ -594,7 +709,7 @@
 
   <!-- DESIGN PROCESS -->
 
-  <section class="process">
+  <section id="process" class="process">
 
 <div class="container">
 
@@ -687,7 +802,7 @@
 
   <!-- ABOUT -->
 
-  <section>
+ <section id="about">
 
 <div class="container">
 
