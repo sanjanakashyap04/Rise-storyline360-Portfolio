@@ -400,28 +400,26 @@
   overflow: hidden;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  border: 1px solid rgba(175, 199, 197, 0.18);
-  border-radius: 50%;
-  right: -80px;
-  top: 60px;
-}
-
 .hero::before {
   content: "";
   position: absolute;
-  width: 160px;
-  height: 160px;
-  border: 1px solid rgba(175, 199, 197, 0.12);
-  border-radius: 50%;
-  right: 40px;
-  top: 120px;
+  left: 0;
+  top: 95px;
+  width: 4px;
+  height: 220px;
+  background: #AFC7C5;
+  opacity: 0.8;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 75px;
+  right: 75px;
+  bottom: 45px;
+  height: 1px;
+  background: rgba(175, 199, 197, 0.22);
+}
       .about-grid {
         gap: 25px;
       }
