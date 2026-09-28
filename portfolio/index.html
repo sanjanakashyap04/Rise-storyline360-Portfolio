@@ -347,6 +347,51 @@
       margin-top: 0;
       margin-bottom: 18px;
     }
+    /* CONTACT */
+
+.contact {
+  background: #F5F7F7;
+  padding: 90px 0;
+}
+
+.contact-content {
+  max-width: 760px;
+}
+
+.contact-intro {
+  max-width: 650px;
+  margin-top: 18px;
+  color: #4E5B66;
+  line-height: 1.7;
+}
+
+.contact-details {
+  display: flex;
+  gap: 50px;
+  margin-top: 38px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #172033;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-item:hover {
+  border-bottom-color: #AFC7C5;
+}
+
+.contact-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #617078;
+}
 
     /* FOOTER */
 
@@ -374,6 +419,9 @@
   .hero { padding: 70px 0 80px; }
 
   .about-grid { gap: 25px; }
+  .contact-details {
+  gap: 28px;
+}
 
   .nav-inner {
     flex-direction: column;
@@ -437,12 +485,13 @@
       <a href="index.html" class="nav-brand">Sanjana Kashyap</a>
 
       <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#approach">Approach</a>
-        <a href="#process">Process</a>
-        <a href="#about">About</a>
-      </div>
+  <a href="#work">Work</a>
+  <a href="#capabilities">Capabilities</a>
+  <a href="#approach">Approach</a>
+  <a href="#process">Process</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
     </div>
   </nav>
 
@@ -850,6 +899,39 @@
   </div>
 
 </div>
+   <!-- CONTACT -->
+
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="contact-content">
+      <p class="eyebrow">GET IN TOUCH</p>
+
+      <h2>Let’s connect.</h2>
+
+      <p class="contact-intro">
+        I’m open to opportunities to design meaningful learning experiences,
+        develop scenario-based eLearning, and contribute to thoughtful
+        instructional design work.
+      </p>
+
+      <div class="contact-details">
+
+        <a href="mailto:sanjanakashyap1015@gmail.com" class="contact-item">
+          <span class="contact-label">Email</span>
+          <span>sanjanakashyap1015@gmail.com</span>
+        </a>
+
+        <a href="tel:+917204283998" class="contact-item">
+          <span class="contact-label">Phone</span>
+          <span>+91 72042 83998</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
   </section>
 
