@@ -351,36 +351,38 @@
 
 .contact {
   background: #F5F7F7;
-  padding: 35px 0 45px;
+  padding: 42px 0 44px;
+  margin: 0;
 }
 
-.contact-bar {
+.contact-content {
+  width: 100%;
+}
+
+.contact-box {
+  border-top: 1px solid #D5DEDE;
+  border-bottom: 1px solid #D5DEDE;
+  padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 24px 30px;
-  border: 1px solid #D6DEDD;
-  border-radius: 8px;
-  background: #FFFFFF;
 }
 
 .contact-heading {
-  flex-shrink: 0;
-}
-
-.contact-heading span {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #2A7F7B;
   font-weight: bold;
+  margin: 0;
 }
 
 .contact-details {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 38px;
+  margin: 0;
 }
 
 .contact-item {
@@ -391,30 +393,43 @@
   text-decoration: none;
 }
 
-.contact-item:hover .contact-value {
+.contact-item:hover {
   color: #2A7F7B;
 }
 
 .contact-label {
   font-size: 11px;
   font-weight: bold;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #617078;
 }
 
 .contact-value {
-  font-size: 15px;
+  font-size: 16px;
   color: #172033;
-  transition: color 0.2s ease;
 }
 
 .contact-divider {
   width: 1px;
-  height: 28px;
-  background: #D6DEDD;
+  height: 24px;
+  background: #CCD6D6;
 }
 
+
+/* FOOTER */
+
+footer {
+  margin: 0;
+  padding: 34px 0;
+  background: #172033;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 /* MOBILE */
 
 @media (max-width: 700px) {
@@ -948,12 +963,11 @@
    <!-- CONTACT -->
 
 <section class="contact">
-  <div class="container">
-    <div class="contact-bar">
+  <div class="container contact-content">
 
-      <div class="contact-heading">
-        <span>Contact</span>
-      </div>
+    <div class="contact-box">
+
+      <h2 class="contact-heading">Contact</h2>
 
       <div class="contact-details">
 
@@ -962,7 +976,7 @@
           <span class="contact-value">7204283998</span>
         </a>
 
-        <div class="contact-divider"></div>
+        <span class="contact-divider"></span>
 
         <a href="mailto:sanjanakashyap1015@gmail.com" class="contact-item">
           <span class="contact-label">Email</span>
@@ -972,9 +986,9 @@
       </div>
 
     </div>
+
   </div>
 </section>
-
   <!-- FOOTER -->
 
   <footer>
