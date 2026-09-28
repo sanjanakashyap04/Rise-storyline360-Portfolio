@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF 8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sanjana Kashyap | Instructional Design Portfolio</title>
@@ -12,63 +12,98 @@
       box-sizing: border-box;
     }
 
+    html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
+      padding: 0;
+      min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       background: #F7F6F2;
       color: #20242B;
       line-height: 1.7;
+      display: flex;
+      flex-direction: column;
     }
 
     .container {
       width: 90%;
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     /* NAVIGATION */
 
-.site-nav {
-  background: #172033;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  position: relative;
-  z-index: 10;
-}
+    .site-nav {
+      background: #172033;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      position: relative;
+      z-index: 10;
+    }
 
-.nav-inner {
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.nav-brand {
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: bold;
-}
+    .nav-brand {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 28px;
-}
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
 
-.nav-links a {
-  color: #C2CBD4;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.2s ease;
-}
+    .nav-links a {
+      color: #C2CBD4;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
 
-.nav-links a:hover {
-  color: white;
-}/* HERO */
+    .nav-links a:hover {
+      color: white;
+    }
+
+    /* HERO */
 
     .hero {
       background: #172033;
       color: white;
-      padding: 90px 0 100px;
+      padding: 95px 0 110px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 95px;
+      width: 4px;
+      height: 220px;
+      background: #AFC7C5;
+      opacity: 0.8;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 75px;
+      right: 75px;
+      bottom: 45px;
+      height: 1px;
+      background: rgba(175, 199, 197, 0.22);
     }
 
     .eyebrow {
@@ -276,30 +311,27 @@
     }
 
     .process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 35px;
-  position: relative;
-}
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+      position: relative;
+    }
 
-.process-grid::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 10%;
-  right: 10%;
-  height: 2px;
-  background: #AFC7C5;
-  z-index: 0;
-}
-
-.process-step {
-  position: relative;
-  z-index: 1;
-}
+    .process-grid::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: #AFC7C5;
+      z-index: 0;
+    }
 
     .process-step {
+      position: relative;
+      z-index: 1;
       background: white;
       padding: 25px;
       border-radius: 12px;
@@ -347,221 +379,148 @@
       margin-top: 0;
       margin-bottom: 18px;
     }
-  /* CONTACT */
 
-.contact {
-  background: #F5F7F7;
-  padding: 42px 0 44px;
-  margin: 0;
-}
+    /* CONTACT */
 
-.contact-content {
-  width: 100%;
-}
+    .contact {
+      background: #F5F7F7;
+      padding: 42px 0 44px;
+      margin: 0;
+    }
 
-.contact-box {
-  border-top: 1px solid #D5DEDE;
-  border-bottom: 1px solid #D5DEDE;
-  padding: 24px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
+    .contact-box {
+      border-top: 1px solid #D5DEDE;
+      border-bottom: 1px solid #D5DEDE;
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
 
-.contact-heading {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #2A7F7B;
-  font-weight: bold;
-  margin: 0;
-}
+    .contact-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2A7F7B;
+      font-weight: bold;
+      margin: 0;
+    }
 
-.contact-details {
-  display: flex;
-  align-items: center;
-  gap: 38px;
-  margin: 0;
-}
+    .contact-details {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      margin: 0;
+    }
 
-.contact-item {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  color: #172033;
-  text-decoration: none;
-}
+    .contact-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      color: #172033;
+      text-decoration: none;
+    }
 
-.contact-item:hover {
-  color: #2A7F7B;
-}
+    .contact-item:hover .contact-value {
+      color: #2A7F7B;
+    }
 
-.contact-label {
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #617078;
-}
+    .contact-label {
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #617078;
+    }
 
-.contact-value {
-  font-size: 16px;
-  color: #172033;
-}
+    .contact-value {
+      font-size: 16px;
+      color: #172033;
+      transition: color 0.2s ease;
+    }
 
-.contact-divider {
-  width: 1px;
-  height: 24px;
-  background: #CCD6D6;
-}
+    .contact-divider {
+      width: 1px;
+      height: 24px;
+      background: #CCD6D6;
+    }
 
-
-/* FOOTER */
-
-footer {
-  margin: 0;
-  padding: 34px 0;
-  background: #172033;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  margin-top: auto;
-  padding: 34px 0;
-  background: #172033;
-}
-/* MOBILE */
-
-@media (max-width: 700px) {
-  .contact-bar {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 22px;
-    padding: 24px;
-  }
-
-  .contact-details {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .contact-divider {
-    display: none;
-  }
-
-  .contact-item {
-    flex-wrap: wrap;
-  }
-}
     /* FOOTER */
 
     footer {
+      margin-top: auto;
+      padding: 30px 0;
       background: #172033;
       color: #B8BEC7;
-      padding: 30px 0;
       text-align: center;
       font-size: 14px;
     }
 
+    footer .container {
+      margin-bottom: 0;
+    }
+
     /* RESPONSIVE */
 
-   @media (max-width: 800px) {
-  h1 { font-size: 42px; }
+    @media (max-width: 800px) {
 
-  .projects,
-  .capability-grid,
-  .approach-grid,
-  .process-grid,
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+      h1 {
+        font-size: 42px;
+      }
 
-  .hero { padding: 70px 0 80px; }
-
-  .about-grid { gap: 25px; }
-  .contact-details {
-  gap: 28px;
-}
-
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 16px 0;
-  }
-
-  .nav-links {
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .process-grid::before {
-    display: none;
-  }
-}
+      .projects,
+      .capability-grid,
+      .approach-grid,
+      .process-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
 
       .hero {
-  background: #172033;
-  color: white;
-  padding: 95px 0 110px;
-  position: relative;
-  overflow: hidden;
-}
+        padding: 70px 0 80px;
+      }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 95px;
-  width: 4px;
-  height: 220px;
-  background: #AFC7C5;
-  opacity: 0.8;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 75px;
-  right: 75px;
-  bottom: 45px;
-  height: 1px;
-  background: rgba(175, 199, 197, 0.22);
-}
       .about-grid {
         gap: 25px;
       }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .process-grid::before {
+        display: none;
+      }
+
+      .contact-box {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .contact-details {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .contact-divider {
+        display: none;
+      }
+
+      .contact-item {
+        flex-wrap: wrap;
+      }
     }
-  html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-
-footer {
-  margin: 0;
-  padding: 34px 0;
-  background: #172033;
-}
-
-footer .container {
-  margin-bottom: 0;
-}
   </style>
 
 </head>
@@ -572,461 +531,503 @@ footer .container {
 
   <nav class="site-nav">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-brand">Sanjana Kashyap</a>
+
+      <a href="index.html" class="nav-brand">
+        Sanjana Kashyap
+      </a>
 
       <div class="nav-links">
-  <a href="#work">Work</a>
-  <a href="#capabilities">Capabilities</a>
-  <a href="#approach">Approach</a>
-  <a href="#process">Process</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</div>
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#approach">Approach</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
     </div>
   </nav>
+
 
   <!-- HERO -->
 
   <header class="hero">
+
     <div class="container">
 
-  <div class="eyebrow">
-    Instructional Design Portfolio
-  </div>
+      <div class="eyebrow">
+        Instructional Design Portfolio
+      </div>
 
-  <h1>
-    Sanjana Kashyap
-  </h1>
+      <h1>
+        Sanjana Kashyap
+      </h1>
 
-  <p class="hero-title">
-    Instructional Designer · Learning Experience Designer
-  </p>
+      <p class="hero-title">
+        Instructional Designer · Learning Experience Designer
+      </p>
 
-  <p class="hero-description">
-    Designing practical, scenario based learning experiences that help
-    people make better decisions, apply new skills, and perform with
-    confidence.
-  </p>
+      <p class="hero-description">
+        Designing practical, scenario based learning experiences that help
+        people make better decisions, apply new skills, and perform with
+        confidence.
+      </p>
 
-</div>
+    </div>
 
   </header>
 
-  <!-- FEATURED WORK -->
+
+  <!-- SELECTED WORK -->
 
   <section id="work">
+
     <div class="container">
 
-  <h2>
-    Selected Instructional Design Work
-  </h2>
+      <h2>
+        Selected Instructional Design Work
+      </h2>
 
-  <p class="section-intro">
-    Explore learning experiences that demonstrate my approach to
-    curriculum architecture, scenario design, storyboarding, and
-    interactive eLearning development.
-  </p>
-
-  <div class="projects">
-
-    <!-- LEADERSHIP -->
-
-    <div class="project-card">
-
-      <div class="project-label">
-        Featured · Fully Built
-      </div>
-
-      <h3>
-        Leadership Readiness Pathway
-      </h3>
-
-      <p>
-        A scenario based leadership learning experience built in
-        Rise 360 with Storyline 360. The pathway develops practical
-        judgment for promotion track individual contributors preparing
-        to step into leadership.
+      <p class="section-intro">
+        Explore learning experiences that demonstrate my approach to
+        curriculum architecture, scenario design, storyboarding, and
+        interactive eLearning development.
       </p>
 
-      <a
-        class="button"
-        href="projects/leadership/index.html"
-      >
-        View Project →
-      </a>
+      <div class="projects">
 
-    </div>
+        <!-- LEADERSHIP -->
+
+        <div class="project-card">
+
+          <div class="project-label">
+            Featured · Fully Built
+          </div>
+
+          <h3>
+            Leadership Readiness Pathway
+          </h3>
+
+          <p>
+            A scenario based leadership learning experience built in
+            Rise 360 with Storyline 360. The pathway develops practical
+            judgment for promotion track individual contributors preparing
+            to step into leadership.
+          </p>
+
+          <a
+            class="button"
+            href="projects/leadership/index.html"
+          >
+            View Project →
+          </a>
+
+        </div>
 
 
-    <!-- NEXATECH -->
+        <!-- NEXATECH -->
 
-    <div class="project-card">
+        <div class="project-card">
 
-      <div class="project-label">
-        In Development
+          <div class="project-label">
+            In Development
+          </div>
+
+          <h3>
+            NexaTech Onboarding Pathway
+          </h3>
+
+          <p>
+            An onboarding learning experience currently in development,
+            focused on creating a structured learning journey for new
+            employees.
+          </p>
+
+          <span class="status">
+            Coming soon
+          </span>
+
+        </div>
+
       </div>
 
-      <h3>
-        NexaTech Onboarding Pathway
-      </h3>
-
-      <p>
-        An onboarding learning experience currently in development,
-        focused on creating a structured learning journey for new
-        employees.
-      </p>
-
-      <span class="status">
-        Coming soon
-      </span>
-
     </div>
-
-  </div>
-
-</div>
 
   </section>
+
 
   <!-- CAPABILITIES -->
 
   <section id="capabilities" class="capabilities">
 
-<div class="container">
+    <div class="container">
 
-  <h2>
-    What I Do
-  </h2>
+      <h2>
+        What I Do
+      </h2>
 
-  <p class="section-intro">
-    I combine my background in teaching and curriculum development
-    with instructional design practices to create purposeful digital
-    learning experiences.
-  </p>
-
-  <div class="capability-grid">
-
-    <div class="capability-card">
-
-      <h3>
-        Learning Experience Design
-      </h3>
-
-      <p>
-        Designing learning journeys around clear objectives, learner
-        needs, meaningful practice, and real world application.
+      <p class="section-intro">
+        I combine my background in teaching and curriculum development
+        with instructional design practices to create purposeful digital
+        learning experiences.
       </p>
 
+      <div class="capability-grid">
+
+        <div class="capability-card">
+
+          <h3>
+            Learning Experience Design
+          </h3>
+
+          <p>
+            Designing learning journeys around clear objectives, learner
+            needs, meaningful practice, and real world application.
+          </p>
+
+        </div>
+
+
+        <div class="capability-card">
+
+          <h3>
+            Scenario Based eLearning
+          </h3>
+
+          <p>
+            Creating realistic situations where learners practice judgment,
+            make decisions, and experience the consequences of their choices.
+          </p>
+
+        </div>
+
+
+        <div class="capability-card">
+
+          <h3>
+            Curriculum and Storyboard Design
+          </h3>
+
+          <p>
+            Translating learning goals into structured curriculum maps,
+            storyboards, interactions, and assessment opportunities.
+          </p>
+
+        </div>
+
+
+        <div class="capability-card">
+
+          <h3>
+            Interactive Development
+          </h3>
+
+          <p>
+            Building interactive learning experiences using Articulate
+            Rise 360 and Storyline 360.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
-
-
-    <div class="capability-card">
-
-      <h3>
-        Scenario Based eLearning
-      </h3>
-
-      <p>
-        Creating realistic situations where learners practice judgment,
-        make decisions, and experience the consequences of their choices.
-      </p>
-
-    </div>
-
-
-    <div class="capability-card">
-
-      <h3>
-        Curriculum and Storyboard Design
-      </h3>
-
-      <p>
-        Translating learning goals into structured curriculum maps,
-        storyboards, interactions, and assessment opportunities.
-      </p>
-
-    </div>
-
-
-    <div class="capability-card">
-
-      <h3>
-        Interactive Development
-      </h3>
-
-      <p>
-        Building interactive learning experiences using Articulate
-        Rise 360 and Storyline 360.
-      </p>
-
-    </div>
-
-  </div>
-
-</div>
 
   </section>
+
 
   <!-- DESIGN APPROACH -->
 
- <section id="approach">
+  <section id="approach">
 
-<div class="container">
+    <div class="container">
 
-  <h2>
-    Design Approach
-  </h2>
+      <h2>
+        Design Approach
+      </h2>
 
-  <p class="section-intro">
-    I design for what learners need to do, not just what they need
-    to know. My approach combines the structure of curriculum design
-    with the practical focus of workplace learning.
-  </p>
-
-  <div class="approach-grid">
-
-    <div class="approach-card">
-
-      <div class="approach-number">
-        01
-      </div>
-
-      <h3>
-        Start with the Learning Problem
-      </h3>
-
-      <p>
-        Identify the performance need before deciding on the learning
-        solution.
+      <p class="section-intro">
+        I design for what learners need to do, not just what they need
+        to know. My approach combines the structure of curriculum design
+        with the practical focus of workplace learning.
       </p>
 
-    </div>
+      <div class="approach-grid">
+
+        <div class="approach-card">
+
+          <div class="approach-number">
+            01
+          </div>
+
+          <h3>
+            Start with the Learning Problem
+          </h3>
+
+          <p>
+            Identify the performance need before deciding on the learning
+            solution.
+          </p>
+
+        </div>
 
 
-    <div class="approach-card">
+        <div class="approach-card">
 
-      <div class="approach-number">
-        02
+          <div class="approach-number">
+            02
+          </div>
+
+          <h3>
+            Design for Practice
+          </h3>
+
+          <p>
+            Give learners opportunities to apply judgment, make decisions,
+            and work through realistic situations.
+          </p>
+
+        </div>
+
+
+        <div class="approach-card">
+
+          <div class="approach-number">
+            03
+          </div>
+
+          <h3>
+            Make Interaction Meaningful
+          </h3>
+
+          <p>
+            Use branching, feedback, consequences, and reflection when
+            they support the learning goal.
+          </p>
+
+        </div>
+
       </div>
 
-      <h3>
-        Design for Practice
-      </h3>
-
-      <p>
-        Give learners opportunities to apply judgment, make decisions,
-        and work through realistic situations.
-      </p>
-
     </div>
-
-
-    <div class="approach-card">
-
-      <div class="approach-number">
-        03
-      </div>
-
-      <h3>
-        Make Interaction Meaningful
-      </h3>
-
-      <p>
-        Use branching, feedback, consequences, and reflection when
-        they support the learning goal.
-      </p>
-
-    </div>
-
-  </div>
-
-</div>
 
   </section>
+
 
   <!-- DESIGN PROCESS -->
 
   <section id="process" class="process">
 
-<div class="container">
+    <div class="container">
 
-  <h2>
-    My Design Process
-  </h2>
+      <h2>
+        My Design Process
+      </h2>
 
-  <p class="section-intro">
-    I connect learning needs, instructional strategy, and development
-    throughout the design process.
-  </p>
-
-  <div class="process-grid">
-
-    <div class="process-step">
-
-      <strong>
-        01 · DISCOVER
-      </strong>
-
-      <h3>
-        Understand
-      </h3>
-
-      <p>
-        Identify the audience, performance need, and learning goals.
+      <p class="section-intro">
+        I connect learning needs, instructional strategy, and development
+        throughout the design process.
       </p>
 
+      <div class="process-grid">
+
+        <div class="process-step">
+
+          <strong>
+            01 · DISCOVER
+          </strong>
+
+          <h3>
+            Understand
+          </h3>
+
+          <p>
+            Identify the audience, performance need, and learning goals.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <strong>
+            02 · DESIGN
+          </strong>
+
+          <h3>
+            Structure
+          </h3>
+
+          <p>
+            Build the learning architecture, objectives, scenarios,
+            and storyboard.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <strong>
+            03 · DEVELOP
+          </strong>
+
+          <h3>
+            Build
+          </h3>
+
+          <p>
+            Turn the design into an interactive learning experience using
+            Rise 360 and Storyline 360.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <strong>
+            04 · REFLECT
+          </strong>
+
+          <h3>
+            Refine
+          </h3>
+
+          <p>
+            Review the learner experience and refine the design based
+            on what the interaction is meant to accomplish.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
-
-
-    <div class="process-step">
-
-      <strong>
-        02 · DESIGN
-      </strong>
-
-      <h3>
-        Structure
-      </h3>
-
-      <p>
-        Build the learning architecture, objectives, scenarios,
-        and storyboard.
-      </p>
-
-    </div>
-
-
-    <div class="process-step">
-
-      <strong>
-        03 · DEVELOP
-      </strong>
-
-      <h3>
-        Build
-      </h3>
-
-      <p>
-        Turn the design into an interactive learning experience using
-        Rise 360 and Storyline 360.
-      </p>
-
-    </div>
-
-
-    <div class="process-step">
-
-      <strong>
-        04 · REFLECT
-      </strong>
-
-      <h3>
-        Refine
-      </h3>
-
-      <p>
-        Review the learner experience and refine the design based
-        on what the interaction is meant to accomplish.
-      </p>
-
-    </div>
-
-  </div>
-
-</div>
 
   </section>
 
+
   <!-- ABOUT -->
 
- <section id="about">
+  <section id="about">
 
-<div class="container">
+    <div class="container">
 
-  <div class="about-grid">
+      <div class="about-grid">
 
-    <div>
-      <div class="about-label">
-        About Me
-      </div>
+        <div>
 
-      <h2>
-        From classroom learning to digital learning experiences.
-      </h2>
-    </div>
+          <div class="about-label">
+            About Me
+          </div>
+
+          <h2>
+            From classroom learning to digital learning experiences.
+          </h2>
+
+        </div>
 
 
-    <div class="about-content">
+        <div class="about-content">
 
-      <p>
-        With a Master’s in Zoology and a Bachelor’s in Education, 
-        I combine subject-matter expertise with professional experience in teaching, 
-        curriculum development, and designing meaningful learning experiences.
-      </p>
+          <p>
+            With a Master’s in Zoology and a Bachelor’s in Education,
+            I combine subject-matter expertise with professional experience
+            in teaching, curriculum development, and designing meaningful
+            learning experiences.
+          </p>
 
-      <p>
-        My work in education has given me a strong foundation in
-        understanding learners, structuring learning experiences,
-        and translating complex ideas into accessible instruction.
-      </p>
+          <p>
+            My work in education has given me a strong foundation in
+            understanding learners, structuring learning experiences,
+            and translating complex ideas into accessible instruction.
+          </p>
 
-      <p>
-        I am now transitioning into instructional design, bringing
-        that foundation into the design of digital and workplace
-        learning experiences.
-      </p>
+          <p>
+            I am now transitioning into instructional design, bringing
+            that foundation into the design of digital and workplace
+            learning experiences.
+          </p>
 
-      <p>
-        My portfolio focuses on scenario based learning, curriculum
-        architecture, interactive eLearning, and thoughtful learner
-        practice. I am particularly interested in creating learning
-        experiences that are purposeful, practical, and connected to
-        what learners actually need to do.
-      </p>
+          <p>
+            My portfolio focuses on scenario based learning, curriculum
+            architecture, interactive eLearning, and thoughtful learner
+            practice. I am particularly interested in creating learning
+            experiences that are purposeful, practical, and connected to
+            what learners actually need to do.
+          </p>
 
-    </div>
-
-  </div>
-
-</div>
-   <!-- CONTACT -->
-
-<section class="contact">
-  <div class="container contact-content">
-
-    <div class="contact-box">
-
-      <h2 class="contact-heading">Contact</h2>
-
-      <div class="contact-details">
-
-        <a href="tel:7204283998" class="contact-item">
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">7204283998</span>
-        </a>
-
-        <span class="contact-divider"></span>
-
-        <a href="mailto:sanjanakashyap1015@gmail.com" class="contact-item">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">sanjanakashyap1015@gmail.com</span>
-        </a>
+        </div>
 
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2 class="contact-heading">
+          Contact
+        </h2>
+
+        <div class="contact-details">
+
+          <a
+            href="tel:+917204283998"
+            class="contact-item"
+          >
+            <span class="contact-label">
+              Phone
+            </span>
+
+            <span class="contact-value">
+              +91 72042 83998
+            </span>
+          </a>
+
+          <span class="contact-divider"></span>
+
+          <a
+            href="mailto:sanjanakashyap1015@gmail.com"
+            class="contact-item"
+          >
+            <span class="contact-label">
+              Email
+            </span>
+
+            <span class="contact-value">
+              sanjanakashyap1015@gmail.com
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- FOOTER -->
 
   <footer>
 
-<div class="container">
-  Sanjana Kashyap · Instructional Design Portfolio
-</div>
+    <div class="container">
+      Sanjana Kashyap · Instructional Design Portfolio
+    </div>
 
   </footer>
+
 
 </body>
 </html>
