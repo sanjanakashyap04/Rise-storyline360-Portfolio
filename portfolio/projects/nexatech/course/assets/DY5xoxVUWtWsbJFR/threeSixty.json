@@ -1,0 +1,67 @@
+{
+  "version": "3.126.38052.0",
+  "course_id": "5UuqAtT9sTS",
+  "title": "NexaTech Onboarding Module 4",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Policies and Expectations"
+    }
+  ],
+  "slides": [
+    {
+      "id": "5slE6fqZxhf",
+      "title": "Welcome",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "6fW4aVIE5E8",
+      "title": "Message From Daniel",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "5j9UaHC23xL",
+      "title": "Decision Pont 1",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "5mcKwuMSiEu",
+      "title": "One Decision Down",
+      "scene_index": "1.4"
+    },
+    {
+      "id": "6DQj8oX6Bda",
+      "title": "Message From Aditya",
+      "scene_index": "1.5"
+    },
+    {
+      "id": "6iQovghDiwW",
+      "title": "Guidance Check",
+      "scene_index": "1.6"
+    },
+    {
+      "id": "6FlQDxMTQ5x",
+      "title": "Decision Point 2",
+      "scene_index": "1.7"
+    },
+    {
+      "id": "5fz1XiEpZoQ",
+      "title": "Principle",
+      "scene_index": "1.8"
+    },
+    {
+      "id": "6eZArJHcKEt",
+      "title": "Wrapping Up",
+      "scene_index": "1.9"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 1940,
+    "height": 1198
+  },
+  "stage": {
+    "width": 1920,
+    "height": 1080
+  }
+}
