@@ -1,1 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NexaTech Onboarding Pathway | Sanjana Kashyap</title>
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #F7F6F2;
+      color: #20242B;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 88%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+
+    .site-nav {
+      background: #172033;
+      padding: 18px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .back-link {
+      color: #DCE8E7;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: #172033;
+      color: white;
+      padding: 78px 0 82px;
+    }
+
+    .eyebrow {
+      color: #74B9B4;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin: 0 0 18px;
+      max-width: 800px;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: #DCE3E8;
+      max-width: 760px;
+      margin: 0;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 72px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: #F5F7F7;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: #172033;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 21px;
+      color: #172033;
+      margin: 0 0 10px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: #59636B;
+      font-size: 17px;
+      margin-bottom: 38px;
+    }
+
+    /* OVERVIEW */
+
+    .overview {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .overview p {
+      color: #4F5961;
+    }
+
+    /* PROJECT AT A GLANCE */
+
+    .glance-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .glance-card {
+      background: white;
+      border: 1px solid #D9E1E1;
+      padding: 24px;
+    }
+
+    .glance-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2A7F7B;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .glance-value {
+      font-size: 16px;
+      color: #20242B;
+    }
+
+    /* LEARNING ARCHITECTURE */
+
+    .architecture {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .module-card {
+      background: white;
+      border-left: 4px solid #2A7F7B;
+      padding: 22px 24px;
+      border-top: 1px solid #E0E5E5;
+      border-right: 1px solid #E0E5E5;
+      border-bottom: 1px solid #E0E5E5;
+    }
+
+    .module-number {
+      color: #2A7F7B;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .module-card p {
+      margin: 0;
+      color: #59636B;
+    }
+
+    /* FEATURED BUILD */
+
+    .showcase {
+      background: #172033;
+      color: white;
+    }
+
+    .showcase h2 {
+      color: white;
+    }
+
+    .showcase .section-intro {
+      color: #CBD3DA;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .showcase-card {
+      background: #202B40;
+      border: 1px solid #344158;
+      padding: 28px;
+    }
+
+    .showcase-card h3 {
+      color: white;
+    }
+
+    .showcase-card p {
+      color: #CBD3DA;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #74B9B4;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    /* COURSE CTA */
+
+    .course-cta {
+      margin-top: 42px;
+      padding: 30px;
+      border: 1px solid #3A4960;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .course-cta strong {
+      color: white;
+      font-size: 17px;
+    }
+
+    .course-cta p {
+      margin: 5px 0 0;
+      color: #CBD3DA;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2A7F7B;
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      font-size: 14px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      background: #236B68;
+    }
+
+    /* DESIGN & DEVELOPMENT */
+
+    .reflection {
+      max-width: 820px;
+    }
+
+    .reflection p {
+      color: #4F5961;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #172033;
+      color: #B8BEC7;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #B8BEC7;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .overview,
+      .showcase-grid,
+      .architecture {
+        grid-template-columns: 1fr;
+      }
+
+      .glance-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .course-cta {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .glance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav class="site-nav">
+
+    <div class="container nav-inner">
+
+      <span class="nav-brand">
+        Sanjana Kashyap
+      </span>
+
+      <a
+        href="../../../index.html"
+        class="back-link"
+      >
+        ← Back to Portfolio
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Instructional Design Portfolio Project
+      </div>
+
+      <h1>
+        NexaTech Onboarding Pathway
+      </h1>
+
+      <p class="hero-subtitle">
+        A structured onboarding experience designed to help new
+        employees understand the organisation, make sound workplace
+        decisions, find the right resources, and take confident action.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- BUSINESS PROBLEM / LEARNING GAP -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="overview">
+
+        <div>
+
+          <h2>
+            Business Problem / Learning Gap
+          </h2>
+
+          <p>
+            New employees receive a large amount of onboarding
+            information from different sources, but information alone
+            does not ensure confident workplace performance.
+          </p>
+
+          <p>
+            The NexaTech onboarding pathway addresses the gap between
+            knowing information and being able to use it. The experience
+            is designed to help new hires understand the organisation,
+            identify the right resources and contacts, apply workplace
+            expectations, and complete essential onboarding actions
+            independently.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h2>
+            Terminal Learning Objective
+          </h2>
+
+          <p>
+            By the end of the onboarding pathway, new employees will be
+            able to navigate key organisational information, identify
+            appropriate resources and contacts, apply workplace
+            expectations to realistic situations, and translate their
+            onboarding knowledge into concrete first-week and 30-day
+            actions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECT AT A GLANCE -->
+
+  <section>
+
+    <div class="container">
+
+      <h2>
+        Project at a Glance
+      </h2>
+
+      <div class="glance-grid">
+
+        <div class="glance-card">
+
+          <div class="glance-label">
+            Audience
+          </div>
+
+          <div class="glance-value">
+            New employees across departments
+          </div>
+
+        </div>
+
+
+        <div class="glance-card">
+
+          <div class="glance-label">
+            Format
+          </div>
+
+          <div class="glance-value">
+            Structured onboarding eLearning
+          </div>
+
+        </div>
+
+
+        <div class="glance-card">
+
+          <div class="glance-label">
+            Development
+          </div>
+
+          <div class="glance-value">
+            Rise 360 + Storyline 360
+          </div>
+
+        </div>
+
+
+        <div class="glance-card">
+
+          <div class="glance-label">
+            Pathway
+          </div>
+
+          <div class="glance-value">
+            8-module onboarding experience
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LEARNING ARCHITECTURE -->
+
+  <section>
+
+    <div class="container">
+
+      <h2>
+        Learning Architecture
+      </h2>
+
+      <p class="section-intro">
+        The pathway moves learners from organisational understanding
+        toward realistic decisions, resource-finding, and concrete
+        onboarding actions.
+      </p>
+
+      <div class="architecture">
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 1
+          </div>
+
+          <h3>
+            Welcome & Orientation
+          </h3>
+
+          <p>
+            Understand what onboarding covers and how to navigate the
+            learning journey.
+          </p>
+
+        </div>
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 2
+          </div>
+
+          <h3>
+            Mission, Vision & Values
+          </h3>
+
+          <p>
+            Connect NexaTech's purpose and values to workplace behaviour.
+          </p>
+
+        </div>
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 3
+          </div>
+
+          <h3>
+            Organisation & Roles
+          </h3>
+
+          <p>
+            Identify teams, responsibilities, and who to approach for
+            common needs.
+          </p>
+
+        </div>
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 4
+          </div>
+
+          <h3>
+            Policies & Expectations
+          </h3>
+
+          <p>
+            Apply workplace and security expectations through realistic
+            decision-making scenarios.
+          </p>
+
+        </div>
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 5
+          </div>
+
+          <h3>
+            Logistics
+          </h3>
+
+          <p>
+            Locate essential practical information needed for day-to-day
+            work.
+          </p>
+
+        </div>
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 6
+          </div>
+
+          <h3>
+            Culture & Ways of Working
+          </h3>
+
+          <p>
+            Apply cultural expectations such as ownership and
+            communication in a realistic workplace dilemma.
+          </p>
+
+        </div>
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 7
+          </div>
+
+          <h3>
+            Tools, Resources & Support
+          </h3>
+
+          <p>
+            Locate the appropriate tool, resource, or contact for a
+            given workplace need.
+          </p>
+
+        </div>
+
+
+        <div class="module-card">
+
+          <div class="module-number">
+            Module 8
+          </div>
+
+          <h3>
+            Knowledge Check & Next Steps
+          </h3>
+
+          <p>
+            Demonstrate understanding and translate learning into
+            first-week and 30-day actions.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED STORYLINE BUILD -->
+
+  <section class="showcase">
+
+    <div class="container">
+
+      <h2>
+        Featured Build: Module 4 — Policies & Expectations
+      </h2>
+
+      <p class="section-intro">
+        The primary Storyline showcase uses decision-based scenarios
+        to move learners beyond policy recall and into realistic
+        workplace judgment.
+      </p>
+
+
+      <div class="showcase-grid">
+
+
+        <div class="showcase-card">
+
+          <div class="tag">
+            Decision Point 01
+          </div>
+
+          <h3>
+            Document-Sharing Scenario
+          </h3>
+
+          <p>
+            Learners respond to a colleague requesting a client rollout
+            document. Multiple response options lead to
+            consequence-based feedback, allowing learners to see the
+            implications of different approaches.
+          </p>
+
+        </div>
+
+
+        <div class="showcase-card">
+
+          <div class="tag">
+            Decision Point 02
+          </div>
+
+          <h3>
+            Embedded Guidance Lookup
+          </h3>
+
+          <p>
+            Learners encounter a second sharing request and must first
+            check the relevant guidance before responding.
+          </p>
+
+        </div>
+
+
+        <div class="showcase-card">
+
+          <div class="tag">
+            Interaction Design
+          </div>
+
+          <h3>
+            Branching + Consequence Feedback
+          </h3>
+
+          <p>
+            Learner choices determine the feedback experience, creating
+            a direct connection between the decision made and the
+            workplace consequence.
+          </p>
+
+        </div>
+
+
+        <div class="showcase-card">
+
+          <div class="tag">
+            Performance Support
+          </div>
+
+          <h3>
+            Resource Lookup Within the Scenario
+          </h3>
+
+          <p>
+            The scenario pairs branching with just-in-time performance
+            support, reinforcing the expectation that employees should
+            know where to find guidance rather than rely on memory alone.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- COURSE BUTTON -->
+
+      <div class="course-cta">
+
+        <div>
+
+          <strong>
+            Experience the Published Onboarding Course
+          </strong>
+
+          <p>
+            Explore the completed Rise 360 learning experience.
+          </p>
+
+        </div>
+
+        <a
+          href="course/index.html"
+          class="button"
+        >
+          Launch Course →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DESIGN & DEVELOPMENT -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="reflection">
+
+        <h2>
+          Design & Development
+        </h2>
+
+        <p>
+          Rise 360 is used for the core onboarding experience, providing
+          a structured and accessible learning journey across the
+          pathway. Storyline 360 is used selectively for higher-complexity
+          decision-making moments where branching and consequence
+          feedback add instructional value.
+        </p>
+
+        <p>
+          Module 4 serves as the primary fully developed Storyline
+          showcase. The scenario-based interaction gives learners an
+          opportunity to apply workplace expectations rather than simply
+          recall policy information.
+        </p>
+
+
+        <h2 style="margin-top: 45px;">
+          Design Approach
+        </h2>
+
+        <p>
+          The pathway follows a progression from understanding to
+          application. Learners first build organisational context,
+          then work through realistic decisions, locate relevant
+          resources, and finish by translating their learning into
+          concrete onboarding actions.
+        </p>
+
+
+        <h2 style="margin-top: 45px;">
+          Tools
+        </h2>
+
+        <p>
+          Articulate Rise 360 · Articulate Storyline 360 · Curriculum
+          Mapping · Storyboarding · Scenario-Based Learning ·
+          Performance Support
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <a href="../../../index.html">
+        ← Back to Sanjana Kashyap's Portfolio
+      </a>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
