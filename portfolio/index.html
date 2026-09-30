@@ -121,70 +121,57 @@
 }
 
 .hero-visual {
-  position: relative;
-  padding: 20px 0;
-}
-.hero-visual-heading {
-  margin-bottom: 22px;
+  padding-left: 20px;
 }
 
-.hero-visual-heading h2 {
-  margin: 0 0 8px;
-  color: #FFFFFF;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.3px;
-}
-
-.hero-visual-heading p {
-  margin: 0;
-  color: #AFC7C5;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.learning-flow {
-  position: relative;
-  max-width: 340px;
-  margin-left: auto;
-}
-
-.flow-step {
-  position: relative;
-  padding: 17px 20px;
-  margin-bottom: 14px;
+.focus-panel {
   border: 1px solid rgba(175, 199, 197, 0.35);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #E1E7EA;
+  border-radius: 12px;
+  padding: 28px 30px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.focus-heading {
+  margin: 0 0 24px;
+  color: #FFFFFF;
   font-size: 13px;
-  letter-spacing: 1.2px;
+  font-weight: bold;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.flow-step span {
+.focus-item {
+  padding: 18px 0;
+  border-top: 1px solid rgba(175, 199, 197, 0.2);
+}
+
+.focus-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.focus-number {
+  display: block;
+  margin-bottom: 7px;
   color: #AFC7C5;
   font-size: 10px;
+  font-weight: bold;
   letter-spacing: 1.5px;
-  margin-right: 8px;
 }
 
-.flow-step:not(:last-child)::after {
-  content: "↓";
-  position: absolute;
-  left: 50%;
-  bottom: -22px;
-  color: #AFC7C5;
-  font-size: 16px;
-  transform: translateX(-50%);
+.focus-item h3 {
+  margin: 0 0 7px;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 600;
 }
 
-.flow-step:last-child {
-  margin-bottom: 0;
-  border-color: rgba(42, 127, 123, 0.8);
-  background: rgba(42, 127, 123, 0.12);
+.focus-item p {
+  margin: 0;
+  color: #C7D0D5;
+  font-size: 13px;
+  line-height: 1.55;
 }
-
     .eyebrow {
       font-size: 13px;
       text-transform: uppercase;
@@ -730,46 +717,65 @@
 
       <!-- HERO LEARNING FLOW -->
 
-     <div class="hero-visual">
+   <div class="hero-visual">
 
-  <div class="hero-visual-heading">
+  <div class="focus-panel">
 
-    <h2>
-      How I Design Learning
+    <h2 class="focus-heading">
+      What I Focus On
     </h2>
 
-    <p>
-      From identifying the learning need to creating
-      opportunities for meaningful practice.
-    </p>
+    <div class="focus-item">
 
-  </div>
+      <span class="focus-number">
+        01
+      </span>
 
-  <div class="learning-flow">
+      <h3>
+        Scenario-Based Learning
+      </h3>
 
-    <div class="flow-step">
-      <span>01</span>
-      Learning Need
+      <p>
+        Realistic situations that help learners practise
+        judgment and decision-making.
+      </p>
+
     </div>
 
-    <div class="flow-step">
-      <span>02</span>
-      Scenario
+
+    <div class="focus-item">
+
+      <span class="focus-number">
+        02
+      </span>
+
+      <h3>
+        Interactive eLearning
+      </h3>
+
+      <p>
+        Purposeful interaction, feedback, and learner
+        practice built in Rise 360 and Storyline 360.
+      </p>
+
     </div>
 
-    <div class="flow-step">
-      <span>03</span>
-      Decision
-    </div>
 
-    <div class="flow-step">
-      <span>04</span>
-      Feedback
-    </div>
+    <div class="focus-item">
 
-    <div class="flow-step">
-      <span>05</span>
-      Practice
+      <span class="focus-number">
+        03
+      </span>
+
+      <h3>
+        Learning for Performance
+      </h3>
+
+      <p>
+        Practical learning experiences connected to what
+        people need to do, not just what they need to know.
+      </p>
+
     </div>
 
   </div>
