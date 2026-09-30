@@ -112,8 +112,17 @@
   }
 
   section {
-    padding: 70px 0;
-  }
+  padding: 60px 0;
+}
+  /* Tighter transition between objective and overview */
+
+section:first-of-type {
+  padding-bottom: 35px;
+}
+
+section:nth-of-type(2) {
+  padding-top: 35px;
+}
 
   h2 {
     font-size: 34px;
@@ -159,15 +168,16 @@
 }
 
 .meta-card {
-  padding: 20px 22px;
+  padding: 24px 28px;
   border: none;
   border-right: 1px solid #D5D9DD;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+
   color: #4D5560;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 .meta-card:last-child {
@@ -176,11 +186,12 @@
 
 .meta-card strong {
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
+
   color: #2A7F7B;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: bold;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
