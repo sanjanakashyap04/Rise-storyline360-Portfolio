@@ -399,16 +399,17 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
-  margin-top: 50px;
+  margin-top: 55px;
   position: relative;
 }
 
+/* Continuous process line */
 .process-grid::before {
   content: "";
   position: absolute;
-  top: 16px;
-  left: 8%;
-  right: 8%;
+  top: 17px;
+  left: 12%;
+  right: 12%;
   height: 2px;
   background: #AFC7C5;
   z-index: 0;
@@ -418,70 +419,53 @@
   position: relative;
   z-index: 1;
   background: transparent;
-  padding: 0 18px;
+  padding: 0 28px;
   border: none;
+  border-radius: 0;
   text-align: center;
 }
 
+/* Numbered circle */
 .process-step::before {
   content: "";
   display: block;
   width: 34px;
   height: 34px;
-  margin: 0 auto 18px;
+  margin: 0 auto 22px;
+
   background: #F7F6F2;
   border: 2px solid #2A7F7B;
   border-radius: 50%;
-  box-shadow: 0 0 0 6px #E8EAED;
+
+  box-shadow: 0 0 0 7px #E8EAED;
 }
 
+/* Stage label */
 .process-step strong {
   display: block;
   color: #2A7F7B;
   font-size: 12px;
-  letter-spacing: 1.5px;
-  margin-bottom: 8px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  margin-bottom: 10px;
 }
 
+/* Main word */
 .process-step h3 {
+  margin: 0 0 10px;
   color: #172033;
-  margin: 0 0 8px;
-  font-size: 20px;
+  font-size: 21px;
+  font-weight: 600;
 }
 
+/* Description */
 .process-step p {
+  margin: 0 auto;
+  max-width: 220px;
   color: #59616B;
-  margin: 0;
   font-size: 14px;
   line-height: 1.6;
 }
-    .process-step {
-      position: relative;
-      z-index: 1;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      border: 1px solid #E1E3E6;
-    }
-
-    .process-step strong {
-      color: #2A7F7B;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .process-step h3 {
-      color: #172033;
-      margin: 8px 0 8px;
-      font-size: 20px;
-    }
-
-    .process-step p {
-      color: #59616B;
-      margin: 0;
-      font-size: 15px;
-    }
-
     /* ABOUT */
 
     .about-grid {
@@ -652,6 +636,18 @@
 .learning-flow {
   max-width: 100%;
   margin-left: 0;
+}
+      .process-grid {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.process-grid::before {
+  display: none;
+}
+
+.process-step {
+  padding: 0 20px;
 }
     }
   </style>
