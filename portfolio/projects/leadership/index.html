@@ -51,6 +51,24 @@
     font-size: 20px;
     color: #E4E8EC;
   }
+  .hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-meta span {
+  display: inline-block;
+  padding: 6px 11px;
+  border: 1px solid rgba(175, 199, 197, 0.45);
+  border-radius: 20px;
+  color: #AFC7C5;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
   .button {
     display: inline-block;
@@ -115,6 +133,21 @@
     font-size: 18px;
     color: #4D5560;
   }
+  .learning-gap {
+  margin-top: 28px;
+  padding: 28px 30px;
+  background: #E8EAED;
+  border-left: 4px solid #2A7F7B;
+  border-radius: 0 10px 10px 0;
+  max-width: 850px;
+}
+
+.learning-gap p {
+  margin: 0;
+  color: #4D5560;
+  font-size: 18px;
+  line-height: 1.7;
+}
 
   .meta-grid {
     display: grid;
@@ -140,11 +173,77 @@
     margin-bottom: 7px;
   }
 
-  .modules {
-    display: grid;
-    gap: 18px;
-    margin-top: 32px;
-  }
+ .modules {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 50px;
+  position: relative;
+}
+
+.modules::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #AFC7C5;
+  z-index: 0;
+}
+
+.module {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding: 0 22px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+.module::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 20px;
+  background: #F7F6F2;
+  border: 2px solid #2A7F7B;
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px #E8EAED;
+}
+
+.module-number {
+  color: #2A7F7B;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+
+.module h3 {
+  margin: 8px 0 10px;
+  font-size: 19px;
+}
+
+.module p {
+  color: #5B626C;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.module strong {
+  display: block;
+  margin-top: 14px;
+  color: #172033;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.module .status {
+  margin-top: 8px;
+}
 
   .module {
     border-left: 4px solid #2A7F7B;
@@ -157,16 +256,25 @@
     color: #6B737D;
   }
 
-  .status {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 11px;
-    border-radius: 20px;
-    background: #E8F1F0;
-    color: #236B68;
-    font-size: 13px;
-    font-weight: bold;
-  }
+ .status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 11px;
+  border-radius: 20px;
+  background: #F1F3F4;
+  color: #59616B;
+  border: 1px solid #D9DDE0;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.status-built {
+  background: #E8F1F0;
+  color: #236B68;
+  border-color: #AFC7C5;
+}
 
   .design-grid {
     display: grid;
@@ -178,6 +286,31 @@
   .design-card {
     border-top: 3px solid #2A7F7B;
   }
+  .design-decisions {
+  margin-top: 35px;
+  padding: 22px 25px;
+  border-top: 1px solid #D5D9DD;
+  border-bottom: 1px solid #D5D9DD;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  text-align: center;
+}
+
+.design-decisions span {
+  color: #2A7F7B;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.design-decisions span:not(:last-child)::after {
+  content: "·";
+  margin-left: 28px;
+  color: #AFC7C5;
+}
 
   .process {
     display: grid;
@@ -259,7 +392,6 @@
       grid-template-columns: 1fr;
     }
   }
-```
   .artifact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -291,6 +423,14 @@
   .artifact-link:hover {
     text-decoration: underline;
   }
+  .architecture-note {
+  margin-top: 25px;
+  color: #2A7F7B;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
   footer {
     background: #172033;
@@ -309,6 +449,22 @@
 .process,
 .artifact-grid {
   grid-template-columns: 1fr;
+}
+  .modules {
+  grid-template-columns: 1fr;
+  gap: 42px;
+}
+
+.modules::before {
+  display: none;
+}
+
+.module {
+  padding: 0 20px;
+}
+
+.design-decisions span:not(:last-child)::after {
+  display: none;
 }
   }
 </style>
@@ -336,6 +492,18 @@
         contributors preparing to step into leadership.
       </p>
 
+<div class="hero-meta">
+
+  <span>Fully Built</span>
+
+  <span>Rise 360</span>
+
+  <span>Storyline 360</span>
+
+  <span>Scenario-Based</span>
+
+</div>
+
      <a
   class="button"
   href="../../../index.html"
@@ -359,13 +527,19 @@
 
       <h2>Learning Gap</h2>
 
-      <p class="intro">
-        Organizations often promote strong individual contributors into
-        management without fully preparing them for the judgment required
-        to lead people. The Leadership Readiness Pathway addresses that gap
-        through realistic scenarios focused on coaching, delegation,
-        conflict, and strategic decision-making.
-      </p>
+      <h2>Learning Gap</h2>
+
+<div class="learning-gap">
+
+  <p>
+    Organizations often promote strong individual contributors into
+    management without fully preparing them for the judgment required
+    to lead people. The Leadership Readiness Pathway addresses that gap
+    through realistic scenarios focused on coaching, delegation,
+    conflict, and strategic decision-making.
+  </p>
+
+</div>
 
 
       <h2 style="margin-top: 50px;">Terminal Learning Objective</h2>
@@ -434,7 +608,9 @@
         and organizational complexity, moving from foundational coaching
         judgment toward strategic decision-making.
       </p>
-
+<p class="architecture-note">
+  Increasing leadership complexity →
+</p>
       <div class="modules">
 
         <div class="module">
@@ -449,7 +625,9 @@
           <strong>Analyse / Evaluate</strong>
           <br>
 
-          <span class="status">Fully built</span>
+         <span class="status status-built">
+  Fully Built
+</span>
         </div>
 
 
@@ -559,6 +737,19 @@
             summary rather than a simple pass/fail score.
           </p>
         </div>
+        <div class="design-decisions">
+
+  <span>Scenario-Based</span>
+
+  <span>Branching Decisions</span>
+
+  <span>Consequence-Based Feedback</span>
+
+  <span>Path-Dependent Interaction</span>
+
+  <span>Personalised Reflection</span>
+
+</div>
 
       </div>
 
@@ -622,18 +813,17 @@
   </section>
 
   
-<!-- SCREENSHOTS -->
+<!-- DEVELOPMENT EVIDENCE -->
 <section class="screenshots">
   <div class="container">
 
-    <h2>Learning Experience Preview</h2>
+    <h2>Development Evidence</h2>
 
-    <p class="intro">
-      A visual walkthrough of the learning experience: the Rise 360 course
-      structure and navigation, the Storyline branching scenario with its
-      decision logic and personalised reflection, and the knowledge check
-      with explanatory feedback.
-    </p>
+<p class="intro">
+  A visual walkthrough of the learning experience, showing the
+  instructional structure, Storyline development, scenario interaction,
+  and personalised reflection.
+</p>
 
     <div class="screenshot-gallery">
 
