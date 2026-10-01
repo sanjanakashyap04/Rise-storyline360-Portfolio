@@ -52,6 +52,25 @@
     color: #E4E8EC;
   }
 
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero-meta span {
+    display: inline-block;
+    padding: 6px 11px;
+    border: 1px solid rgba(175, 199, 197, 0.45);
+    border-radius: 20px;
+    color: #AFC7C5;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   .button {
     display: inline-block;
     margin-top: 28px;
@@ -96,7 +115,17 @@
   }
 
   section {
-    padding: 70px 0;
+    padding: 60px 0;
+  }
+
+  /* Tighter transition between objective and overview */
+
+  section:first-of-type {
+    padding-bottom: 35px;
+  }
+
+  section:nth-of-type(2) {
+    padding-top: 35px;
   }
 
   h2 {
@@ -118,57 +147,147 @@
     color: #4D5560;
   }
 
-  .meta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 32px;
+  /* LEARNING GAP */
+
+  .learning-gap,
+  .learning-objective {
+    margin-top: 28px;
+    padding: 28px 30px;
+    background: #E8EAED;
+    border-left: 4px solid #2A7F7B;
+    border-radius: 0 10px 10px 0;
+    max-width: 100%;
   }
 
-  .meta-card,
-  .module,
-  .design-card,
-  .process-step {
-    background: white;
-    padding: 27px;
-    border-radius: 12px;
-    border: 1px solid #E1E3E6;
-    box-shadow: 0 4px 16px rgba(23, 32, 51, 0.04);
+  .learning-gap p,
+  .learning-objective p {
+    margin: 0;
+    color: #4D5560;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .learning-objective {
+    margin-top: 28px;
+  }
+
+  /* PROJECT OVERVIEW */
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr 1fr;
+    gap: 0;
+    margin-top: 28px;
+    border-top: 1px solid #D5D9DD;
+    border-bottom: 1px solid #D5D9DD;
+  }
+
+  .meta-card {
+    padding: 24px 28px;
+    border: none;
+    border-right: 1px solid #D5D9DD;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #4D5560;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .meta-card:last-child {
+    border-right: none;
   }
 
   .meta-card strong {
     display: block;
-    color: #172033;
-    margin-bottom: 7px;
+    margin-bottom: 9px;
+    color: #2A7F7B;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
   }
+
+  /* LEARNING ARCHITECTURE */
 
   .modules {
     display: grid;
-    gap: 18px;
-    margin-top: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 40px;
+    border-top: 1px solid #D5D9DD;
+    border-bottom: 1px solid #D5D9DD;
   }
 
   .module {
-    border-left: 4px solid #2A7F7B;
+    position: relative;
+    background: transparent;
+    padding: 30px 24px 32px;
+    border: none;
+    border-right: 1px solid #D5D9DD;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 275px;
+  }
+
+  .module:nth-child(4n) {
+    border-right: none;
+  }
+
+  .module:nth-child(n+5) {
+    border-top: 1px solid #D5D9DD;
   }
 
   .module-number {
-    font-size: 12px;
+    color: #2A7F7B;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #6B737D;
+  }
+
+  .module h3 {
+    margin: 9px 0 12px;
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .module p {
+    color: #5B626C;
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .module strong {
+    display: block;
+    margin-top: 10px;
+    color: #172033;
+    font-size: 12px;
+    letter-spacing: 0.5px;
   }
 
   .status {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     padding: 5px 11px;
     border-radius: 20px;
+    background: #F1F3F4;
+    color: #59616B;
+    border: 1px solid #D9DDE0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  .status-built {
     background: #E8F1F0;
     color: #236B68;
-    font-size: 13px;
-    font-weight: bold;
+    border-color: #AFC7C5;
   }
+
+  /* DESIGN APPROACH */
 
   .design-grid {
     display: grid;
@@ -178,20 +297,85 @@
   }
 
   .design-card {
+    background: transparent;
+    padding: 25px 0 27px;
     border-top: 3px solid #2A7F7B;
   }
+
+  .design-card h3 {
+    margin-top: 0;
+  }
+
+  .design-card p {
+    color: #4D5560;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  /* DESIGN PROCESS */
 
   .process {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin-top: 32px;
+    gap: 0;
+    margin-top: 38px;
+    padding: 38px 20px 42px;
+    background: #E8EAED;
+    border-radius: 22px;
+  }
+
+  .process-step {
+    position: relative;
+    background: transparent;
+    padding: 0 22px;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .process-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #AFC7C5;
+    z-index: 0;
   }
 
   .process-step strong {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 30px;
+    border: 2px solid #2A7F7B;
+    border-radius: 50%;
+    background: #F7F6F2;
     color: #2A7F7B;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: bold;
   }
+
+  .process-step h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+  }
+
+  .process-step p {
+    margin: 0 auto;
+    max-width: 220px;
+    color: #4D5560;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* DEVELOPMENT EVIDENCE */
 
   .screenshots {
     background: #E8EAED;
@@ -257,6 +441,8 @@
     line-height: 1.6;
   }
 
+  /* ARTIFACTS */
+
   .artifact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -297,9 +483,6 @@
   }
 
   @media (max-width: 800px) {
-    .screenshot-gallery {
-      grid-template-columns: 1fr;
-    }
 
     h1 {
       font-size: 40px;
@@ -309,6 +492,51 @@
     .design-grid,
     .process,
     .artifact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .meta-card {
+      border-right: none;
+      border-bottom: 1px solid #D5D9DD;
+      padding: 18px 5px;
+    }
+
+    .meta-card:last-child {
+      border-bottom: none;
+    }
+
+    .modules {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .module {
+      border-right: none;
+      border-bottom: 1px solid #D5D9DD;
+      min-height: auto;
+    }
+
+    .module:nth-child(n+5) {
+      border-top: none;
+    }
+
+    .module:last-child {
+      border-bottom: none;
+    }
+
+    .process {
+      gap: 30px;
+    }
+
+    .process-step:not(:last-child)::after {
+      display: none;
+    }
+
+    .process-step strong {
+      margin-bottom: 18px;
+    }
+
+    .screenshot-gallery {
       grid-template-columns: 1fr;
     }
   }
@@ -321,9 +549,9 @@
   <header class="hero">
     <div class="container">
 
-     <a class="back-link" href="/Rise-storyline360-Portfolio/portfolio/index.html">
-  ← Back to Portfolio
-</a>
+      <a class="back-link" href="/Rise-storyline360-Portfolio/portfolio/index.html">
+        ← Back to Portfolio
+      </a>
 
       <div class="eyebrow">
         Instructional Design Portfolio Project
@@ -338,57 +566,82 @@
         action.
       </p>
 
+      <div class="hero-meta">
+
+        <span>Fully Built</span>
+
+        <span>Rise 360</span>
+
+        <span>Storyline 360</span>
+
+        <span>Scenario-Based</span>
+
+      </div>
+
       <a
         class="button"
         href="course/index.html"
         target="_blank"
       >
-        Launch NexaTech Onboarding → 
+        Launch NexaTech Onboarding →
       </a>
-    <a
-  class="button button-secondary"
- href="course/storyline/story.html"
-  target="_blank"
->
-  Launch Storyline Experience →
-</a>
+
+      <a
+        class="button button-secondary"
+        href="course/storyline/story.html"
+        target="_blank"
+      >
+        Launch Storyline Experience →
+      </a>
 
     </div>
   </header>
 
 
   <!-- BUSINESS PROBLEM & LEARNING OBJECTIVE -->
+
   <section>
     <div class="container">
 
       <h2>Learning Gap</h2>
 
-      <p class="intro">
-        New employees often receive a large amount of information during
-        onboarding, but information alone does not ensure that they can
-        confidently apply what they have learned in the workplace.
-        The NexaTech Onboarding Pathway addresses that gap by creating
-        a structured learning journey that connects organisational
-        knowledge with realistic workplace decisions, resource lookup,
-        and practical next steps.
-      </p>
+      <div class="learning-gap">
+
+        <p>
+          New employees often receive a large amount of information during
+          onboarding, but information alone does not ensure that they can
+          confidently apply what they have learned in the workplace.
+          The NexaTech Onboarding Pathway addresses that gap by creating
+          a structured learning journey that connects organisational
+          knowledge with realistic workplace decisions, resource lookup,
+          and practical next steps.
+        </p>
+
+      </div>
 
 
-      <h2 style="margin-top: 50px;">Terminal Learning Objective</h2>
+      <h2 style="margin-top: 50px;">
+        Terminal Learning Objective
+      </h2>
 
-      <p class="intro">
-        By the end of the NexaTech Onboarding Pathway, new employees
-        will be able to navigate key organisational information,
-        identify appropriate resources and contacts, apply workplace
-        expectations to realistic situations, and translate their
-        onboarding knowledge into concrete first-week and 30-day actions.
-      </p>
+      <div class="learning-objective">
+
+        <p>
+          By the end of the NexaTech Onboarding Pathway, new employees
+          will be able to navigate key organisational information,
+          identify appropriate resources and contacts, apply workplace
+          expectations to realistic situations, and translate their
+          onboarding knowledge into concrete first-week and 30-day actions.
+        </p>
+
+      </div>
 
     </div>
   </section>
 
 
   <!-- PROJECT OVERVIEW -->
+
   <section>
     <div class="container">
 
@@ -432,6 +685,7 @@
 
 
   <!-- LEARNING ARCHITECTURE -->
+
   <section>
     <div class="container">
 
@@ -447,60 +701,92 @@
 
 
         <div class="module">
-          <div class="module-number">Module 01</div>
 
-          <h3>Welcome & Orientation</h3>
+          <div class="module-number">
+            Module 01
+          </div>
+
+          <h3>
+            Welcome & Orientation
+          </h3>
 
           <p>
             Introduces the onboarding journey and establishes the
             context for the learning experience.
           </p>
 
-          <strong>Understand / Apply</strong>
-          <br>
+          <strong>
+            Understand / Apply
+          </strong>
 
-          <span class="status">Fully built</span>
+          <span class="status status-built">
+            Fully built
+          </span>
+
         </div>
 
 
         <div class="module">
-          <div class="module-number">Module 02</div>
 
-          <h3>Mission, Vision & Values</h3>
+          <div class="module-number">
+            Module 02
+          </div>
+
+          <h3>
+            Mission, Vision & Values
+          </h3>
 
           <p>
             Helps learners understand the organisation's purpose,
             direction, and values.
           </p>
 
-          <strong>Understand / Apply</strong>
-          <br>
+          <strong>
+            Understand / Apply
+          </strong>
 
-          <span class="status">Fully built</span>
+          <span class="status status-built">
+            Fully built
+          </span>
+
         </div>
 
 
         <div class="module">
-          <div class="module-number">Module 03</div>
 
-          <h3>Organisation & Roles</h3>
+          <div class="module-number">
+            Module 03
+          </div>
+
+          <h3>
+            Organisation & Roles
+          </h3>
 
           <p>
             Helps new employees understand teams, responsibilities,
             and where to go for common workplace needs.
           </p>
 
-          <strong>Understand / Apply</strong>
-          <br>
+          <strong>
+            Understand / Apply
+          </strong>
 
-          <span class="status">Fully built</span>
+          <span class="status status-built">
+            Fully built
+          </span>
+
         </div>
 
 
         <div class="module">
-          <div class="module-number">Module 04</div>
 
-          <h3>Policies & Expectations</h3>
+          <div class="module-number">
+            Module 04
+          </div>
+
+          <h3>
+            Policies & Expectations
+          </h3>
 
           <p>
             Uses realistic workplace situations to help learners
@@ -508,78 +794,118 @@
             decisions.
           </p>
 
-          <strong>Analyse / Apply</strong>
-          <br>
+          <strong>
+            Analyse / Apply
+          </strong>
 
-          <span class="status">Storyline experience</span>
+          <span class="status status-built">
+            Storyline experience
+          </span>
+
         </div>
 
 
         <div class="module">
-          <div class="module-number">Module 05</div>
 
-          <h3>Logistics</h3>
+          <div class="module-number">
+            Module 05
+          </div>
+
+          <h3>
+            Logistics
+          </h3>
 
           <p>
             Provides essential practical information that new
             employees need as they begin working.
           </p>
 
-          <strong>Understand / Apply</strong>
-          <br>
+          <strong>
+            Understand / Apply
+          </strong>
 
-          <span class="status">Fully built</span>
+          <span class="status status-built">
+            Fully built
+          </span>
+
         </div>
 
 
         <div class="module">
-          <div class="module-number">Module 06</div>
 
-          <h3>Culture & Ways of Working</h3>
+          <div class="module-number">
+            Module 06
+          </div>
+
+          <h3>
+            Culture & Ways of Working
+          </h3>
 
           <p>
             Connects organisational culture and ways of working
             to realistic workplace behaviour.
           </p>
 
-          <strong>Apply</strong>
-          <br>
+          <strong>
+            Apply
+          </strong>
 
-          <span class="status">Fully built</span>
+          <span class="status status-built">
+            Fully built
+          </span>
+
         </div>
 
 
         <div class="module">
-          <div class="module-number">Module 07</div>
 
-          <h3>Tools, Resources & Support</h3>
+          <div class="module-number">
+            Module 07
+          </div>
+
+          <h3>
+            Tools, Resources & Support
+          </h3>
 
           <p>
             Helps learners identify the appropriate tools, resources,
             and support channels for common workplace needs.
           </p>
 
-          <strong>Apply / Navigate</strong>
-          <br>
+          <strong>
+            Apply / Navigate
+          </strong>
 
-          <span class="status">Fully built</span>
+          <span class="status status-built">
+            Fully built
+          </span>
+
         </div>
 
 
         <div class="module">
-          <div class="module-number">Module 08</div>
 
-          <h3>Knowledge Check & Next Steps</h3>
+          <div class="module-number">
+            Module 08
+          </div>
+
+          <h3>
+            Knowledge Check & Next Steps
+          </h3>
 
           <p>
             Reinforces key learning and helps learners translate
             onboarding knowledge into practical next actions.
           </p>
 
-          <strong>Evaluate / Apply</strong>
-          <br>
+          <strong>
+            Evaluate / Apply
+          </strong>
 
-          <span class="status">Fully built</span>
+          <span class="status status-built">
+            Fully built
+          </span>
+
         </div>
 
 
@@ -590,6 +916,7 @@
 
 
   <!-- DESIGN APPROACH -->
+
   <section>
     <div class="container">
 
@@ -605,45 +932,61 @@
 
 
         <div class="design-card">
-          <h3>Progressive Orientation</h3>
+
+          <h3>
+            Progressive Orientation
+          </h3>
 
           <p>
             The pathway introduces organisational context before
             moving learners into workplace expectations, resources,
             and application.
           </p>
+
         </div>
 
 
         <div class="design-card">
-          <h3>Scenario-Based Practice</h3>
+
+          <h3>
+            Scenario-Based Practice
+          </h3>
 
           <p>
             Learners encounter realistic workplace situations that
             require them to apply expectations rather than simply
             recall information.
           </p>
+
         </div>
 
 
         <div class="design-card">
-          <h3>Just-in-Time Resource Support</h3>
+
+          <h3>
+            Just-in-Time Resource Support
+          </h3>
 
           <p>
             Learners are encouraged to locate and use relevant
             guidance and resources when making workplace decisions.
           </p>
+
         </div>
 
 
         <div class="design-card">
-          <h3>Action-Oriented Learning</h3>
+
+          <h3>
+            Action-Oriented Learning
+          </h3>
 
           <p>
             The experience closes the gap between completing onboarding
             and knowing what to do next through concrete first-week
             and 30-day actions.
           </p>
+
         </div>
 
 
@@ -654,6 +997,7 @@
 
 
   <!-- DESIGN PROCESS -->
+
   <section>
     <div class="container">
 
@@ -669,50 +1013,74 @@
 
 
         <div class="process-step">
-          <strong>01</strong>
 
-          <h3>Curriculum</h3>
+          <strong>
+            01
+          </strong>
+
+          <h3>
+            Curriculum
+          </h3>
 
           <p>
             Defined the onboarding goal, learning progression,
             module structure, and learner journey.
           </p>
+
         </div>
 
 
         <div class="process-step">
-          <strong>02</strong>
 
-          <h3>Storyboard</h3>
+          <strong>
+            02
+          </strong>
+
+          <h3>
+            Storyboard
+          </h3>
 
           <p>
             Mapped learning objectives, content, interactions,
             scenarios, feedback, and learner actions.
           </p>
+
         </div>
 
 
         <div class="process-step">
-          <strong>03</strong>
 
-          <h3>Development</h3>
+          <strong>
+            03
+          </strong>
+
+          <h3>
+            Development
+          </h3>
 
           <p>
             Built the onboarding experience in Rise 360 and developed
             higher-complexity interactions using Storyline 360.
           </p>
+
         </div>
 
 
         <div class="process-step">
-          <strong>04</strong>
 
-          <h3>Reflection</h3>
+          <strong>
+            04
+          </strong>
+
+          <h3>
+            Reflection
+          </h3>
 
           <p>
             Designed the final learning experience to connect
             onboarding knowledge with practical workplace action.
           </p>
+
         </div>
 
 
@@ -722,521 +1090,532 @@
   </section>
 
 
- <!-- SCREENSHOTS -->
+  <!-- DEVELOPMENT EVIDENCE -->
 
-<section class="screenshots">
+  <section class="screenshots">
 
-  <div class="container">
-
-    <h2>
-      Learning Experience Preview
-    </h2>
-
-       <p class="intro">
-      A closer look at the instructional design and interactive
-      development behind Module 4: Policies and Expectations,
-      including scenario flow, decision points, feedback,
-      resource lookup, and Storyline interaction logic, followed by
-      screens from across the wider onboarding course.
-    </p>
-
-    <div class="screenshot-gallery">
-
-
-      <!-- 01 · STORYLINE SCENARIO FLOW -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/01-story-view-slide-map.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/01-story-view-slide-map.png"
-            alt="Storyline scenario flow and slide map for NexaTech onboarding"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            01 · Storyline Scenario Flow
-          </span>
-
-          <h3>
-            Scenario Structure
-          </h3>
-
-          <p>
-            The Storyline flow maps the sequence of the Module 4
-            experience, including the opening, decision points,
-            guidance check, principle, and wrap-up.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 02 · MODULE 4 -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/02-welcome-slide.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/02-welcome-slide.png"
-            alt="Module 4 Policies and Expectations welcome slide"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            02 · Module 4
-          </span>
-
-          <h3>
-            Policies and Expectations
-          </h3>
-
-          <p>
-            The module introduction establishes the learning focus
-            and prepares learners to recognise when a situation
-            requires checking guidance before acting.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 03 · DECISION POINT -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/03-decision-before-choice.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/03-decision-before-choice.png"
-            alt="NexaTech onboarding scenario decision point before learner choice"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            03 · Decision Point
-          </span>
-
-          <h3>
-            Scenario-Based Decision Making
-          </h3>
-
-          <p>
-            Learners respond to a realistic workplace situation
-            by choosing how they would handle a document-sharing
-            request.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 04 · FEEDBACK -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/04-decision-after-choice.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/04-decision-after-choice.png"
-            alt="NexaTech onboarding scenario after learner choice with feedback"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            04 · Feedback
-          </span>
-
-          <h3>
-            Choice-Based Feedback
-          </h3>
-
-          <p>
-            Feedback changes based on the learner's selected
-            response, allowing each choice to surface the reasoning
-            behind the appropriate workplace action.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 05 · FEEDBACK DESIGN -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/05-feedback-layers-2x2.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/05-feedback-layers-2x2.png"
-            alt="Four feedback layers for different learner choices"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            05 · Feedback Design
-          </span>
-
-          <h3>
-            Feedback Across Learner Choices
-          </h3>
-
-          <p>
-            The four feedback states demonstrate how the interaction
-            provides differentiated guidance for different learner
-            decisions.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 06 · RESOURCE CHECK -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/06-resource-check-handbook.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/06-resource-check-handbook.png"
-            alt="NexaTech employee handbook resource check"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            06 · Resource Check
-          </span>
-
-          <h3>
-            Just-in-Time Resource Lookup
-          </h3>
-
-          <p>
-            Learners can check the NexaTech Employee Handbook and
-            external-sharing guidance before committing to a response.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 07 · DEVELOPMENT LOGIC -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/07-trigger-panel-decision-card.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/07-trigger-panel-decision-card.png"
-            alt="Storyline trigger panel showing interactive decision card logic"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            07 · Development Logic
-          </span>
-
-          <h3>
-            Interactive Trigger Logic
-          </h3>
-
-          <p>
-            The Storyline trigger panel shows the interaction logic
-            used to control card states and learner responses within
-            the decision activity.
-          </p>
-
-        </div>
-
-      </div>
-      <!-- 08 · COURSE INTRODUCTION -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/nexatech-08-course-cover-landing.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/nexatech-08-course-cover-landing.png"
-            alt="NexaTech's Onboarding course cover in Rise 360 with a Start Course button"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            08 · Course Introduction
-          </span>
-
-          <h3>
-            Course Cover
-          </h3>
-
-          <p>
-            The branded landing screen introduces NexaTech's Onboarding
-            and gives new employees a clear starting point with a single
-            Start Course action.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 09 · LEARNING ARCHITECTURE -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/nexatech-09-course-overview-module-list.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/nexatech-09-course-overview-module-list.png"
-            alt="NexaTech onboarding course overview listing all eight modules"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            09 · Learning Architecture
-          </span>
-
-          <h3>
-            Course Overview
-          </h3>
-
-          <p>
-            A short description and eight-module outline show new
-            employees the full journey, from welcome and orientation
-            through to the knowledge check and next steps.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 10 · MODULE 2 -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/nexatech-10-values-matching-interaction.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/nexatech-10-values-matching-interaction.png"
-            alt="Module 2 matching activity pairing company values with behaviours"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            10 · Module 2 · Values
-          </span>
-
-          <h3>
-            Values Matching Interaction
-          </h3>
-
-          <p>
-            Learners match each company value to the behaviour that best
-            represents it, turning abstract values into observable
-            workplace actions.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 11 · MODULE 3 -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/nexatech-11-organisation-overview-labelled-graphic.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/nexatech-11-organisation-overview-labelled-graphic.png"
-            alt="Module 3 interactive office graphic with markers introducing each team"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            11 · Module 3 · Organisation
-          </span>
-
-          <h3>
-            Meet the Teams
-          </h3>
-
-          <p>
-            An interactive office graphic lets learners tap each marker
-            to meet a team, such as Human Resource, and see what that
-            team handles.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 12 · MODULE 3 SCENARIO -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/nexatech-12-scenario-feedback-try-again.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/nexatech-12-scenario-feedback-try-again.png"
-            alt="Character-led scenario feedback with a Try Again option"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            12 · Module 3 · Scenario Feedback
-          </span>
-
-          <h3>
-            Character-Led Feedback
-          </h3>
-
-          <p>
-            A workplace character explains why contacting another team
-            directly can miss context, then invites the learner to try
-            the decision again.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 13 · MODULE 4 -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/nexatech-13-policies-module-intro-video.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/nexatech-13-policies-module-intro-video.png"
-            alt="Module 4 introduction with a policy-themed video"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            13 · Module 4 · Policies
-          </span>
-
-          <h3>
-            Module Introduction Video
-          </h3>
-
-          <p>
-            The module opens with a short video that moves learners from
-            knowing who to ask toward applying judgment in situations
-            where the right call isn't obvious.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- 14 · MODULE 5 -->
-
-      <div class="screenshot-card">
-
-        <a
-          href="course/images/nexatech-14-logistics-sorting-activity.png"
-          target="_blank"
-        >
-          <img
-            src="course/images/nexatech-14-logistics-sorting-activity.png"
-            alt="Module 5 sorting activity matching workplace questions to the right team or system"
-          >
-        </a>
-
-        <div class="screenshot-content">
-
-          <span>
-            14 · Module 5 · Logistics
-          </span>
-
-          <h3>
-            Sorting Activity
-          </h3>
-
-          <p>
-            Learners sort everyday questions, such as a pay date query,
-            to the right team or system: MoveEase, PaySync, Admin &amp;
-            Facilities or Payroll Support.
-          </p>
-
-        </div>
-
-      </div>
-
-
-</section>
-
-  <!-- DESIGN ARTIFACTS -->
-  <section>
     <div class="container">
 
-      <h2>Design Artifacts</h2>
+      <h2>
+        Development Evidence
+      </h2>
+
+      <p class="intro">
+        A closer look at the instructional design and interactive
+        development behind Module 4: Policies and Expectations,
+        including scenario flow, decision points, feedback,
+        resource lookup, and Storyline interaction logic, followed by
+        screens from across the wider onboarding course.
+      </p>
+
+      <div class="screenshot-gallery">
+
+
+        <!-- 01 · STORYLINE SCENARIO FLOW -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/01-story-view-slide-map.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/01-story-view-slide-map.png"
+              alt="Storyline scenario flow and slide map for NexaTech onboarding"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              01 · Storyline Scenario Flow
+            </span>
+
+            <h3>
+              Scenario Structure
+            </h3>
+
+            <p>
+              The Storyline flow maps the sequence of the Module 4
+              experience, including the opening, decision points,
+              guidance check, principle, and wrap-up.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 02 · MODULE 4 -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/02-welcome-slide.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/02-welcome-slide.png"
+              alt="Module 4 Policies and Expectations welcome slide"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              02 · Module 4
+            </span>
+
+            <h3>
+              Policies and Expectations
+            </h3>
+
+            <p>
+              The module introduction establishes the learning focus
+              and prepares learners to recognise when a situation
+              requires checking guidance before acting.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 03 · DECISION POINT -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/03-decision-before-choice.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/03-decision-before-choice.png"
+              alt="NexaTech onboarding scenario decision point before learner choice"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              03 · Decision Point
+            </span>
+
+            <h3>
+              Scenario-Based Decision Making
+            </h3>
+
+            <p>
+              Learners respond to a realistic workplace situation
+              by choosing how they would handle a document-sharing
+              request.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 04 · FEEDBACK -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/04-decision-after-choice.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/04-decision-after-choice.png"
+              alt="NexaTech onboarding scenario after learner choice with feedback"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              04 · Feedback
+            </span>
+
+            <h3>
+              Choice-Based Feedback
+            </h3>
+
+            <p>
+              Feedback changes based on the learner's selected
+              response, allowing each choice to surface the reasoning
+              behind the appropriate workplace action.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 05 · FEEDBACK DESIGN -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/05-feedback-layers-2x2.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/05-feedback-layers-2x2.png"
+              alt="Four feedback layers for different learner choices"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              05 · Feedback Design
+            </span>
+
+            <h3>
+              Feedback Across Learner Choices
+            </h3>
+
+            <p>
+              The four feedback states demonstrate how the interaction
+              provides differentiated guidance for different learner
+              decisions.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 06 · RESOURCE CHECK -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/06-resource-check-handbook.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/06-resource-check-handbook.png"
+              alt="NexaTech employee handbook resource check"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              06 · Resource Check
+            </span>
+
+            <h3>
+              Just-in-Time Resource Lookup
+            </h3>
+
+            <p>
+              Learners can check the NexaTech Employee Handbook and
+              external-sharing guidance before committing to a response.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 07 · DEVELOPMENT LOGIC -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/07-trigger-panel-decision-card.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/07-trigger-panel-decision-card.png"
+              alt="Storyline trigger panel showing interactive decision card logic"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              07 · Development Logic
+            </span>
+
+            <h3>
+              Interactive Trigger Logic
+            </h3>
+
+            <p>
+              The Storyline trigger panel shows the interaction logic
+              used to control card states and learner responses within
+              the decision activity.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 08 · COURSE INTRODUCTION -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/nexatech-08-course-cover-landing.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/nexatech-08-course-cover-landing.png"
+              alt="NexaTech's Onboarding course cover in Rise 360 with a Start Course button"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              08 · Course Introduction
+            </span>
+
+            <h3>
+              Course Cover
+            </h3>
+
+            <p>
+              The branded landing screen introduces NexaTech's Onboarding
+              and gives new employees a clear starting point with a single
+              Start Course action.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 09 · LEARNING ARCHITECTURE -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/nexatech-09-course-overview-module-list.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/nexatech-09-course-overview-module-list.png"
+              alt="NexaTech onboarding course overview listing all eight modules"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              09 · Learning Architecture
+            </span>
+
+            <h3>
+              Course Overview
+            </h3>
+
+            <p>
+              A short description and eight-module outline show new
+              employees the full journey, from welcome and orientation
+              through to the knowledge check and next steps.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 10 · MODULE 2 -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/nexatech-10-values-matching-interaction.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/nexatech-10-values-matching-interaction.png"
+              alt="Module 2 matching activity pairing company values with behaviours"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              10 · Module 2 · Values
+            </span>
+
+            <h3>
+              Values Matching Interaction
+            </h3>
+
+            <p>
+              Learners match each company value to the behaviour that best
+              represents it, turning abstract values into observable
+              workplace actions.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 11 · MODULE 3 -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/nexatech-11-organisation-overview-labelled-graphic.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/nexatech-11-organisation-overview-labelled-graphic.png"
+              alt="Module 3 interactive office graphic with markers introducing each team"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              11 · Module 3 · Organisation
+            </span>
+
+            <h3>
+              Meet the Teams
+            </h3>
+
+            <p>
+              An interactive office graphic lets learners tap each marker
+              to meet a team, such as Human Resource, and see what that
+              team handles.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 12 · MODULE 3 SCENARIO -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/nexatech-12-scenario-feedback-try-again.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/nexatech-12-scenario-feedback-try-again.png"
+              alt="Character-led scenario feedback with a Try Again option"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              12 · Module 3 · Scenario Feedback
+            </span>
+
+            <h3>
+              Character-Led Feedback
+            </h3>
+
+            <p>
+              A workplace character explains why contacting another team
+              directly can miss context, then invites the learner to try
+              the decision again.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 13 · MODULE 4 -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/nexatech-13-policies-module-intro-video.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/nexatech-13-policies-module-intro-video.png"
+              alt="Module 4 introduction with a policy-themed video"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              13 · Module 4 · Policies
+            </span>
+
+            <h3>
+              Module Introduction Video
+            </h3>
+
+            <p>
+              The module opens with a short video that moves learners from
+              knowing who to ask toward applying judgment in situations
+              where the right call isn't obvious.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 14 · MODULE 5 -->
+
+        <div class="screenshot-card">
+
+          <a
+            href="course/images/nexatech-14-logistics-sorting-activity.png"
+            target="_blank"
+          >
+            <img
+              src="course/images/nexatech-14-logistics-sorting-activity.png"
+              alt="Module 5 sorting activity matching workplace questions to the right team or system"
+            >
+          </a>
+
+          <div class="screenshot-content">
+
+            <span>
+              14 · Module 5 · Logistics
+            </span>
+
+            <h3>
+              Sorting Activity
+            </h3>
+
+            <p>
+              Learners sort everyday questions, such as a pay date query,
+              to the right team or system: MoveEase, PaySync, Admin &amp;
+              Facilities or Payroll Support.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DESIGN ARTIFACTS -->
+
+  <section>
+
+    <div class="container">
+
+      <h2>
+        Design Artifacts
+      </h2>
 
       <p class="intro">
         Supporting documentation showing the instructional design
@@ -1295,10 +1674,12 @@
       </div>
 
     </div>
+
   </section>
 
 
   <!-- FOOTER -->
+
   <footer>
 
     <div class="container">
