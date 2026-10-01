@@ -424,6 +424,222 @@
   border-radius: 0;
   text-align: center;
 }
+/* =========================================================
+   TWO PROJECTS — TWO DESIGN APPROACHES
+   ========================================================= */
+
+.project-comparison {
+  background: #F7F6F2;
+  padding: 85px 0;
+}
+
+.project-comparison h2 {
+  margin: 0 0 18px;
+  color: #172033;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.project-comparison-intro {
+  max-width: 820px;
+  margin: 0 0 48px;
+  color: #40566D;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.comparison-card {
+  background: #FFFFFF;
+  border: 1px solid #D5DDE0;
+  border-top: 4px solid #2A7F7B;
+  border-radius: 16px;
+  padding: 38px 40px;
+  box-shadow: 0 6px 20px rgba(23, 32, 51, 0.04);
+}
+
+.comparison-card h3 {
+  margin: 0 0 10px;
+  color: #172033;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.comparison-focus {
+  margin: 0 0 28px;
+  color: #2A7F7B;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.comparison-card h4 {
+  margin: 26px 0 12px;
+  color: #172033;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+
+.comparison-card p {
+  margin: 0;
+  color: #40566D;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.comparison-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.comparison-skills li {
+  position: relative;
+  padding-left: 17px;
+  color: #4D5560;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.comparison-skills li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2A7F7B;
+  font-weight: bold;
+}
+
+/* Shared skills */
+
+.shared-skills {
+  margin-top: 55px;
+  padding: 38px 40px;
+  background: #E8EAED;
+  border-radius: 18px;
+}
+
+.shared-skills h3 {
+  margin: 0 0 12px;
+  color: #172033;
+  font-size: 27px;
+}
+
+.shared-skills-intro {
+  max-width: 760px;
+  margin: 0 0 30px;
+  color: #40566D;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.shared-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.shared-skill {
+  padding-top: 18px;
+  border-top: 2px solid #AFC7C5;
+}
+
+.shared-skill strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #2A7F7B;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.shared-skill span {
+  color: #40566D;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Direct comparison */
+
+.comparison-summary {
+  margin-top: 38px;
+  border-top: 1px solid #D5DDE0;
+  border-bottom: 1px solid #D5DDE0;
+}
+
+.comparison-summary-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.comparison-summary-cell {
+  padding: 22px 28px;
+  color: #40566D;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.comparison-summary-cell:first-child {
+  border-right: 1px solid #D5DDE0;
+}
+
+.comparison-summary-cell strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #172033;
+  font-size: 17px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .project-comparison {
+    padding: 65px 0;
+  }
+
+  .project-comparison h2 {
+    font-size: 34px;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-card {
+    padding: 30px 28px;
+  }
+
+  .comparison-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .shared-skills {
+    padding: 30px 28px;
+  }
+
+  .shared-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-summary-row {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-summary-cell:first-child {
+    border-right: none;
+    border-bottom: 1px solid #D5DDE0;
+  }
+
+}
 
 /* Numbered circle */
 .process-step::before {
@@ -889,6 +1105,231 @@
   </a>
 
 </div>
+<!-- =========================================================
+     TWO PROJECTS — TWO DESIGN APPROACHES
+     ========================================================= -->
+
+<section class="project-comparison">
+
+  <div class="container">
+
+    <h2>Two Projects, Two Design Approaches</h2>
+
+    <p class="project-comparison-intro">
+      Together, these projects demonstrate two different approaches to
+      instructional design. Leadership Readiness focuses on scenario-based
+      decision making and deeper Storyline 360 development, while NexaTech
+      explores structured Rise 360 course architecture, onboarding design,
+      and the learner journey across a broader program.
+    </p>
+
+
+    <div class="comparison-grid">
+
+      <!-- LEADERSHIP -->
+
+      <div class="comparison-card">
+
+        <h3>Leadership Readiness Pathway</h3>
+
+        <p class="comparison-focus">
+          Scenario-Based Learning · Storyline 360
+        </p>
+
+        <h4>Primary Focus</h4>
+
+        <p>
+          Interactive leadership scenarios that allow learners to practise
+          judgment, make decisions, experience consequences, and reflect
+          on their choices.
+        </p>
+
+        <h4>Skills Demonstrated</h4>
+
+        <ul class="comparison-skills">
+
+          <li>Storyline 360 development</li>
+
+          <li>Branching scenario design</li>
+
+          <li>Variables and triggers</li>
+
+          <li>Consequence-based feedback</li>
+
+          <li>Path-dependent interaction</li>
+
+          <li>Personalised learner reflection</li>
+
+          <li>Scenario-based assessment</li>
+
+          <li>Higher-complexity decision design</li>
+
+        </ul>
+
+        <h4>What This Project Demonstrates</h4>
+
+        <p>
+          Leadership Readiness demonstrates deeper exploration of
+          interactive Storyline development. Each module is designed
+          around scenario-based practice, with Storyline used to create
+          branching interactions, store learner choices, control
+          consequences, and support personalised reflection.
+        </p>
+
+      </div>
+
+
+      <!-- NEXATECH -->
+
+      <div class="comparison-card">
+
+        <h3>NexaTech Onboarding Pathway</h3>
+
+        <p class="comparison-focus">
+          Course Architecture · Rise 360
+        </p>
+
+        <h4>Primary Focus</h4>
+
+        <p>
+          A structured onboarding experience focused on organising
+          learning content, sequencing modules, guiding learners through
+          the program, and creating a cohesive Rise 360 experience.
+        </p>
+
+        <h4>Skills Demonstrated</h4>
+
+        <ul class="comparison-skills">
+
+          <li>Rise 360 course development</li>
+
+          <li>Curriculum architecture</li>
+
+          <li>Module sequencing</li>
+
+          <li>Onboarding experience design</li>
+
+          <li>Content organisation</li>
+
+          <li>Learner navigation</li>
+
+          <li>Lesson and interaction structure</li>
+
+          <li>Visual experience design in Rise</li>
+
+        </ul>
+
+        <h4>What This Project Demonstrates</h4>
+
+        <p>
+          NexaTech demonstrates broader exploration of Rise 360 as a
+          course-development environment, with emphasis on structuring
+          the learner journey, organising onboarding content, sequencing
+          modules, and creating a cohesive learning experience across
+          the program.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- SHARED SKILLS -->
+
+    <div class="shared-skills">
+
+      <h3>Skills Across Both Projects</h3>
+
+      <p class="shared-skills-intro">
+        While the development emphasis differs, both projects demonstrate
+        the ability to move from an instructional need to a structured,
+        purposeful learning experience.
+      </p>
+
+      <div class="shared-skills-grid">
+
+        <div class="shared-skill">
+          <strong>Instructional Strategy</strong>
+          <span>
+            Translating learning needs into structured learning experiences.
+          </span>
+        </div>
+
+        <div class="shared-skill">
+          <strong>Learning Architecture</strong>
+          <span>
+            Sequencing objectives, content, activities, and learner progression.
+          </span>
+        </div>
+
+        <div class="shared-skill">
+          <strong>Scenario Design</strong>
+          <span>
+            Using realistic workplace situations to move learners beyond recall.
+          </span>
+        </div>
+
+        <div class="shared-skill">
+          <strong>Interactive Learning</strong>
+          <span>
+            Designing meaningful learner decisions, interactions, and feedback.
+          </span>
+        </div>
+
+        <div class="shared-skill">
+          <strong>Articulate Development</strong>
+          <span>
+            Working across Rise 360 and Storyline 360 for different instructional needs.
+          </span>
+        </div>
+
+        <div class="shared-skill">
+          <strong>Learner Experience</strong>
+          <span>
+            Designing clear navigation, progression, feedback, and reflection.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- DIRECT DIFFERENCE -->
+
+    <div class="comparison-summary">
+
+      <div class="comparison-summary-row">
+
+        <div class="comparison-summary-cell">
+
+          <strong>Leadership Readiness</strong>
+
+          Greater emphasis on
+          <strong>interaction depth</strong>,
+          branching scenarios, variables, triggers,
+          consequences, and personalised reflection.
+
+        </div>
+
+        <div class="comparison-summary-cell">
+
+          <strong>NexaTech</strong>
+
+          Greater emphasis on
+          <strong>course architecture and breadth</strong>,
+          Rise 360 development, onboarding structure,
+          sequencing, and learner navigation.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       </div>
 
