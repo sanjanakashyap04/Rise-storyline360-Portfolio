@@ -428,6 +428,73 @@
     color: #2A7F7B;
     font-size: 14px;
   }
+  .design-process {
+  margin-top: 80px;
+}
+
+.design-process h2 {
+  margin-bottom: 14px;
+}
+
+.design-process .section-intro {
+  margin-bottom: 42px;
+  max-width: 1000px;
+}
+
+.process-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: #D6DDDF;
+  border: 1px solid #D6DDDF;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.process-card {
+  background: #FFFFFF;
+  padding: 32px 28px 34px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+.process-number {
+  width: 54px;
+  height: 54px;
+  border: 3px solid #2A8582;
+  border-radius: 50%;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2A8582;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.process-label {
+  text-align: center;
+  color: #2A8582;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.process-card h3 {
+  text-align: center;
+  margin: 0 0 16px;
+  font-size: 25px;
+}
+
+.process-card p {
+  text-align: center;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #40566D;
+}
 
   .screenshots {
     background: #E8EAED;
@@ -939,60 +1006,85 @@
   </section>
 
 
-  <!-- DESIGN PROCESS -->
-  <section>
-    <div class="container">
+ <!-- DESIGN PROCESS -->
+<section class="design-process">
 
-      <h2>Design Process</h2>
+  <div class="container">
 
-      <p class="intro">
-        The project demonstrates a progression from program-level
-        curriculum architecture to scenario design and interactive
-        development.
-      </p>
+    <h2>Design Process</h2>
 
-      <div class="process">
+    <p class="section-intro">
+      The project demonstrates a progression from program-level curriculum
+      architecture to scenario design and interactive development.
+    </p>
 
-        <div class="process-step">
-          <strong>01</strong>
-          <h3>Curriculum</h3>
-          <p>
-            Defined the program goal, terminal objective and
-            four-module learning architecture.
-          </p>
-        </div>
+    <div class="process-cards">
 
-        <div class="process-step">
-          <strong>02</strong>
-          <h3>Storyboard</h3>
-          <p>
-            Mapped scenario decisions, cognitive demand and
-            consequence paths.
-          </p>
-        </div>
+      <div class="process-card">
 
-        <div class="process-step">
-          <strong>03</strong>
-          <h3>Development</h3>
-          <p>
-            Built the fully developed module using Rise 360
-            and Storyline 360.
-          </p>
-        </div>
+        <div class="process-number">01</div>
 
-        <div class="process-step">
-          <strong>04</strong>
-          <h3>Reflection</h3>
-          <p>
-            Used personalised outcomes to support reflection and
-            behavior change rather than certification.
-          </p>
-        </div>
+        <div class="process-label">DISCOVER</div>
+
+        <h3>Understand</h3>
+
+        <p>
+          Defined the program goal, terminal objective and four-module
+          learning architecture.
+        </p>
+
+      </div>
+
+      <div class="process-card">
+
+        <div class="process-number">02</div>
+
+        <div class="process-label">DESIGN</div>
+
+        <h3>Structure</h3>
+
+        <p>
+          Mapped scenario decisions, cognitive demand and consequence
+          paths.
+        </p>
+
+      </div>
+
+      <div class="process-card">
+
+        <div class="process-number">03</div>
+
+        <div class="process-label">DEVELOP</div>
+
+        <h3>Build</h3>
+
+        <p>
+          Built the fully developed module using Rise 360 and
+          Storyline 360.
+        </p>
+
+      </div>
+
+      <div class="process-card">
+
+        <div class="process-number">04</div>
+
+        <div class="process-label">REFLECT</div>
+
+        <h3>Refine</h3>
+
+        <p>
+          Used personalised outcomes to support reflection and
+          behavior change rather than certification.
+        </p>
 
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
   <!-- DEVELOPMENT EVIDENCE -->
