@@ -7,6 +7,7 @@
   <title>Leadership Readiness Pathway | Sanjana Kashyap</title>
 
   <style>
+
   * {
     box-sizing: border-box;
   }
@@ -24,6 +25,9 @@
     max-width: 1100px;
     margin: auto;
   }
+
+
+  /* HERO */
 
   .hero {
     background: #172033;
@@ -114,11 +118,12 @@
     color: white;
   }
 
+
+  /* GENERAL SECTIONS */
+
   section {
     padding: 60px 0;
   }
-
-  /* Tighter transition between objective and overview */
 
   section:first-of-type {
     padding-bottom: 35px;
@@ -147,6 +152,9 @@
     color: #4D5560;
   }
 
+
+  /* LEARNING GAP */
+
   .learning-gap {
     margin-top: 28px;
     padding: 28px 30px;
@@ -162,28 +170,35 @@
     font-size: 18px;
     line-height: 1.7;
   }
+
+
+  /* TERMINAL LEARNING OBJECTIVE */
+
   .learning-objective {
-  margin-top: 55px;
-}
+    margin-top: 55px;
+  }
 
-.learning-objective h2 {
-  margin-bottom: 28px;
-}
+  .learning-objective h2 {
+    margin-bottom: 28px;
+  }
 
-.objective-card {
-  width: 77%;
-  background: #E8EAED;
-  border-left: 6px solid #2A8582;
-  border-radius: 0 15px 15px 0;
-  padding: 38px 44px;
-  box-sizing: border-box;
-}
-.objective-card p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.65;
-  color: #40566D;
-}
+  .objective-card {
+    width: 77%;
+    background: #E8EAED;
+    border-left: 6px solid #2A8582;
+    border-radius: 0 15px 15px 0;
+    padding: 38px 44px;
+  }
+
+  .objective-card p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.65;
+    color: #40566D;
+  }
+
+
+  /* PROJECT OVERVIEW */
 
   .meta-grid {
     display: grid;
@@ -201,7 +216,6 @@
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-
     color: #4D5560;
     font-size: 16px;
     line-height: 1.55;
@@ -214,7 +228,6 @@
   .meta-card strong {
     display: block;
     margin-bottom: 9px;
-
     color: #2A7F7B;
     font-size: 11px;
     font-weight: bold;
@@ -371,7 +384,6 @@
     margin-top: 14px;
   }
 
-
   .status {
     display: inline-block;
     margin-top: 10px;
@@ -392,6 +404,9 @@
     border-color: #AFC7C5;
   }
 
+
+  /* DESIGN APPROACH */
+
   .design-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -401,6 +416,16 @@
 
   .design-card {
     border-top: 3px solid #2A7F7B;
+  }
+
+  .design-card h3 {
+    margin-top: 20px;
+  }
+
+  .design-card p {
+    color: #5B626C;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .design-decisions span {
@@ -417,148 +442,143 @@
     color: #AFC7C5;
   }
 
-/* DESIGN PROCESS */
 
-.process {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  margin-top: 38px;
-  padding: 34px 26px 42px;
-  background: #E8EAED;
-  border-radius: 22px;
-}
+  /* =====================================================
+     DESIGN PROCESS
+     MATCHED TO NEXATECH
+     ===================================================== */
 
-.process-step {
-  position: relative;
-  padding: 0 22px;
-  text-align: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-.process-step::after {
-  content: "";
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background: #AFC7C5;
-  z-index: 0;
-}
-
-.process-step:last-child::after {
-  display: none;
-}
-
-.process-step strong {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 58px;
-  height: 58px;
-  margin: 0 auto 34px;
-
-  border: 3px solid #2A7F7B;
-  border-radius: 50%;
-
-  background: #E8EAED;
-  color: #2A7F7B;
-
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
-.process-step h3 {
-  margin: 0 0 24px;
-  color: #172033;
-  font-size: 28px;
-  line-height: 1.2;
-}
-
-.process-step p {
-  max-width: 260px;
-  margin: 0 auto;
-
-  color: #34516B;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-
-/* DEVELOPMENT EVIDENCE */
-
-.screenshots {
-  background: #E8EAED;
-}
-
-
-/* DESIGN ARTIFACTS */
-
-.artifact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  margin-top: 38px;
-}
-
-.artifact-card {
-  background: #FFFFFF;
-  padding: 38px 40px;
-  border: 1px solid #D5DDE0;
-  border-top: 4px solid #2A7F7B;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(23, 32, 51, 0.04);
-}
-
-.artifact-card h3 {
-  color: #172033;
-  font-size: 28px;
-  margin: 0 0 24px;
-}
-
-.artifact-card p {
-  color: #34516B;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.artifact-link {
-  display: inline-block;
-  margin-top: 18px;
-  color: #236B68;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-  .process {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .design-process {
+    background: #F7F6F2;
+    padding: 60px 0 60px;
   }
 
-  .process-step::after {
+  .design-process .section-intro {
+    max-width: 1000px;
+    margin: 0 0 0;
+    color: #172033;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .process-cards {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+
+    margin-top: 38px;
+    padding: 34px 26px 42px;
+
+    background: #E8EAED;
+    border-radius: 22px;
+  }
+
+  .process-card {
+    position: relative;
+
+    padding: 0 22px;
+
+    text-align: center;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Connecting line */
+
+  .process-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 28px;
+    left: 50%;
+
+    width: 100%;
+    height: 2px;
+
+    background: #AFC7C5;
+
+    z-index: 0;
+  }
+
+  .process-card:last-child::after {
     display: none;
   }
 
-  .artifact-grid {
-    grid-template-columns: 1fr;
+  /* Number circles */
+
+  .process-number {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 34px;
+
+    border: 3px solid #2A7F7B;
+    border-radius: 50%;
+
+    background: #E8EAED;
+
+    color: #2A7F7B;
+
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1px;
   }
 
-}
+  /* DISCOVER / DESIGN / DEVELOP / REFLECT */
+
+  .process-label {
+    margin-bottom: 18px;
+
+    color: #2A7F7B;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+  }
+
+  /* Understand / Structure / Build / Refine */
+
+  .process-card h3 {
+    margin: 0 0 24px;
+
+    color: #172033;
+
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .process-card p {
+    max-width: 260px;
+
+    margin: 0 auto;
+
+    color: #34516B;
+
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+
+  /* =====================================================
+     DEVELOPMENT EVIDENCE
+     ===================================================== */
+
   .screenshots {
     background: #E8EAED;
   }
@@ -623,11 +643,10 @@
     line-height: 1.6;
   }
 
-  @media (max-width: 800px) {
-    .screenshot-gallery {
-      grid-template-columns: 1fr;
-    }
-  }
+
+  /* =====================================================
+     DESIGN ARTIFACTS
+     ===================================================== */
 
   .artifact-grid {
     display: grid;
@@ -645,8 +664,15 @@
     box-shadow: 0 4px 16px rgba(23, 32, 51, 0.04);
   }
 
+  .artifact-card h3 {
+    margin-top: 0;
+    color: #172033;
+  }
+
   .artifact-card p {
     color: #5B626C;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .artifact-link {
@@ -661,20 +687,77 @@
     text-decoration: underline;
   }
 
+
+  /* =====================================================
+     FOOTER
+     ===================================================== */
+
   footer {
-  background: #172033;
-  color: #B8BEC7;
-  padding: 30px 0;
-  text-align: center;
-}
+    background: #172033;
+    color: #B8BEC7;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+
+  /* =====================================================
+     RESPONSIVE
+     ===================================================== */
+
+  @media (max-width: 900px) {
+
+    .process-cards {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 42px;
+    }
+
+    .process-card::after {
+      display: none;
+    }
+
+    .meta-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meta-card:nth-child(2) {
+      border-right: none;
+    }
+
+    .meta-card:nth-child(n+3) {
+      border-top: 1px solid #D5D9DD;
+    }
+
+    .modules {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .module:not(:last-child)::after {
+      display: none;
+    }
+
+    .design-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .screenshot-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+
   @media (max-width: 800px) {
+
     h1 {
       font-size: 40px;
     }
 
+    .objective-card {
+      width: 100%;
+    }
+
     .meta-grid,
     .design-grid,
-    .process,
     .artifact-grid {
       grid-template-columns: 1fr;
     }
@@ -691,15 +774,11 @@
 
     .process-cards {
       grid-template-columns: 1fr;
-      gap: 42px;
+      gap: 40px;
     }
 
-    .process-cards::before {
+    .process-card::after {
       display: none;
-    }
-
-    .process-number {
-      margin-bottom: 18px;
     }
 
     .modules {
@@ -715,6 +794,8 @@
       bottom: -20px;
 
       transform: translateX(50%);
+
+      display: flex;
     }
 
     .module {
@@ -737,14 +818,58 @@
     .design-decisions span:not(:last-child)::after {
       display: none;
     }
+
+    .screenshot-gallery {
+      grid-template-columns: 1fr;
+    }
+
   }
-</style>
+
+
+  @media (max-width: 600px) {
+
+    .learning-gap {
+      padding: 25px 24px;
+    }
+
+    .objective-card {
+      padding: 30px 28px;
+    }
+
+    .design-process {
+      padding: 50px 0;
+    }
+
+    .process-cards {
+      padding: 34px 20px 38px;
+      border-radius: 18px;
+    }
+
+    .process-card {
+      padding: 0 12px;
+    }
+
+    .process-card h3 {
+      font-size: 25px;
+    }
+
+    .process-card p {
+      font-size: 17px;
+    }
+
+  }
+
+  </style>
 </head>
+
 
 <body>
 
+
   <!-- HERO -->
+
   <header class="hero">
+
     <div class="container">
 
       <a class="back-link" href="../../index.html">
@@ -792,11 +917,14 @@
       </a>
 
     </div>
+
   </header>
 
 
   <!-- BUSINESS PROBLEM & LEARNING OBJECTIVE -->
+
   <section>
+
     <div class="container">
 
       <h2>Learning Gap</h2>
@@ -814,28 +942,34 @@
       </div>
 
 
-     <section class="learning-objective">
+      <section class="learning-objective">
 
-  <h2>Terminal Learning Objective</h2>
+        <h2>Terminal Learning Objective</h2>
 
-  <div class="objective-card">
+        <div class="objective-card">
 
-    <p>
-      By the end of the Leadership Readiness Pathway, promotion-track
-      individual contributors will be able to evaluate realistic
-      people-leadership scenarios spanning coaching, delegation,
-      conflict, and resourcing trade-offs and select the response
-      that reflects sound managerial judgment, avoiding the failure
-      patterns modelled at each module's decision points.
-    </p>
+          <p>
+            By the end of the Leadership Readiness Pathway, promotion-track
+            individual contributors will be able to evaluate realistic
+            people-leadership scenarios spanning coaching, delegation,
+            conflict, and resourcing trade-offs and select the response
+            that reflects sound managerial judgment, avoiding the failure
+            patterns modelled at each module's decision points.
+          </p>
 
-  </div>
+        </div>
 
-</section>
+      </section>
+
+    </div>
+
+  </section>
 
 
   <!-- PROJECT OVERVIEW -->
+
   <section>
+
     <div class="container">
 
       <h2>Project Overview</h2>
@@ -849,35 +983,53 @@
       <div class="meta-grid">
 
         <div class="meta-card">
+
           <strong>Audience</strong>
+
           Promotion-track and high-potential individual contributors
           who are not yet in a formal leadership role.
+
         </div>
 
+
         <div class="meta-card">
+
           <strong>Tools</strong>
+
           Articulate Rise 360 and Storyline 360
+
         </div>
 
+
         <div class="meta-card">
+
           <strong>Learning Format</strong>
+
           Scenario-based learning, branching decisions,
           knowledge checks and consequence-based feedback.
+
         </div>
 
+
         <div class="meta-card">
+
           <strong>Estimated Duration</strong>
+
           Approximately 20 minutes
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- LEARNING ARCHITECTURE -->
+
   <section>
+
     <div class="container">
 
       <h2>Learning Architecture</h2>
@@ -889,12 +1041,18 @@
       </p>
 
       <div class="complexity-label">
+
         <span>Foundational</span>
+
         <span>Increasing Leadership Complexity →</span>
+
         <span>Strategic</span>
+
       </div>
 
+
       <div class="modules">
+
 
         <div class="module">
 
@@ -1018,11 +1176,14 @@
       </div>
 
     </div>
+
   </section>
 
 
   <!-- DESIGN APPROACH -->
+
   <section>
+
     <div class="container">
 
       <h2>Design Approach</h2>
@@ -1034,7 +1195,9 @@
 
       <div class="design-grid">
 
+
         <div class="design-card">
+
           <h3>Branching Decisions</h3>
 
           <p>
@@ -1042,10 +1205,12 @@
             situations rather than simply selecting answers to
             recall-based questions.
           </p>
+
         </div>
 
 
         <div class="design-card">
+
           <h3>Consequence-Based Feedback</h3>
 
           <p>
@@ -1053,117 +1218,156 @@
             to see how different leadership responses can affect a
             situation.
           </p>
+
         </div>
 
 
         <div class="design-card">
+
           <h3>Path-Dependent Interaction</h3>
 
           <p>
             The fully built module uses the learner's earlier decision
             path to inform what happens later in the scenario.
           </p>
+
         </div>
 
 
         <div class="design-card">
+
           <h3>Personalised Reflection</h3>
 
           <p>
             The experience closes with a variable-driven personalised
             summary rather than a simple pass/fail score.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
- <!-- DESIGN PROCESS -->
-<section class="design-process">
+  <!-- DESIGN PROCESS -->
 
-  <div class="container">
+  <section class="design-process">
 
-    <h2>Design Process</h2>
+    <div class="container">
 
-    <p class="section-intro">
-      The project demonstrates a progression from program-level curriculum
-      architecture to scenario design and interactive development.
-    </p>
+      <h2>Design Process</h2>
 
-    <div class="process-cards">
+      <p class="section-intro">
+        The project demonstrates a progression from program-level curriculum
+        architecture to scenario design and interactive development.
+      </p>
 
-      <div class="process-card">
 
-        <div class="process-number">01</div>
+      <div class="process-cards">
 
-        <div class="process-label">DISCOVER</div>
 
-        <h3>Understand</h3>
+        <div class="process-card">
 
-        <p>
-          Defined the program goal, terminal objective and four-module
-          learning architecture.
-        </p>
+          <div class="process-number">
+            01
+          </div>
 
-      </div>
+          <div class="process-label">
+            DISCOVER
+          </div>
 
-      <div class="process-card">
+          <h3>
+            Understand
+          </h3>
 
-        <div class="process-number">02</div>
+          <p>
+            Defined the program goal, terminal objective and four-module
+            learning architecture.
+          </p>
 
-        <div class="process-label">DESIGN</div>
+        </div>
 
-        <h3>Structure</h3>
 
-        <p>
-          Mapped scenario decisions, cognitive demand and consequence
-          paths.
-        </p>
+        <div class="process-card">
 
-      </div>
+          <div class="process-number">
+            02
+          </div>
 
-      <div class="process-card">
+          <div class="process-label">
+            DESIGN
+          </div>
 
-        <div class="process-number">03</div>
+          <h3>
+            Structure
+          </h3>
 
-        <div class="process-label">DEVELOP</div>
+          <p>
+            Mapped scenario decisions, cognitive demand and consequence
+            paths.
+          </p>
 
-        <h3>Build</h3>
+        </div>
 
-        <p>
-          Built the fully developed module using Rise 360 and
-          Storyline 360.
-        </p>
 
-      </div>
+        <div class="process-card">
 
-      <div class="process-card">
+          <div class="process-number">
+            03
+          </div>
 
-        <div class="process-number">04</div>
+          <div class="process-label">
+            DEVELOP
+          </div>
 
-        <div class="process-label">REFLECT</div>
+          <h3>
+            Build
+          </h3>
 
-        <h3>Refine</h3>
+          <p>
+            Built the fully developed module using Rise 360 and
+            Storyline 360.
+          </p>
 
-        <p>
-          Used personalised outcomes to support reflection and
-          behavior change rather than certification.
-        </p>
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            04
+          </div>
+
+          <div class="process-label">
+            REFLECT
+          </div>
+
+          <h3>
+            Refine
+          </h3>
+
+          <p>
+            Used personalised outcomes to support reflection and
+            behavior change rather than certification.
+          </p>
+
+        </div>
+
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
   <!-- DEVELOPMENT EVIDENCE -->
+
   <section class="screenshots">
+
     <div class="container">
 
       <h2>Development Evidence</h2>
@@ -1174,215 +1378,351 @@
         and personalised reflection.
       </p>
 
+
       <div class="screenshot-gallery">
 
+
         <!-- 01 -->
+
         <div class="screenshot-card">
+
           <a href="images/01-course-cover-landing.png" target="_blank">
+
             <img
               src="images/01-course-cover-landing.png"
               alt="Leadership Readiness Pathway course cover in Rise 360 with a Start Course button"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>01 · Course Introduction</span>
-            <h3>Course Cover</h3>
+
+            <span>
+              01 · Course Introduction
+            </span>
+
+            <h3>
+              Course Cover
+            </h3>
+
             <p>
               The branded landing screen names the pathway and gives
               learners a single, clear Start Course action.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 02 -->
+
         <div class="screenshot-card">
+
           <a href="images/02-course-overview-lesson-list.png" target="_blank">
+
             <img
               src="images/02-course-overview-lesson-list.png"
               alt="Course overview listing the program orientation, four lessons and summary"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>02 · Learning Architecture</span>
-            <h3>Course Overview</h3>
+
+            <span>
+              02 · Learning Architecture
+            </span>
+
+            <h3>
+              Course Overview
+            </h3>
+
             <p>
               A short program description and lesson outline show learners
               the full journey: orientation, four lessons and a closing summary.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 03 -->
+
         <div class="screenshot-card">
+
           <a href="images/03-lesson-player-navigation.png" target="_blank">
+
             <img
               src="images/03-lesson-player-navigation.png"
               alt="Rise 360 lesson player with sidebar navigation and progress tracking"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>03 · Navigation &amp; Progress</span>
-            <h3>Lesson Player</h3>
+
+            <span>
+              03 · Navigation &amp; Progress
+            </span>
+
+            <h3>
+              Lesson Player
+            </h3>
+
             <p>
               The sidebar tracks progress across lessons, and locked content
               keeps learners moving through the lesson in sequence.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 04 -->
+
         <div class="screenshot-card">
+
           <a href="images/04-storyline-story-view-branching.png" target="_blank">
+
             <img
               src="images/04-storyline-story-view-branching.png"
               alt="Storyline 360 Story View showing the Module 1 branching scenario map"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>04 · Development</span>
-            <h3>Story View: Branching Map</h3>
+
+            <span>
+              04 · Development
+            </span>
+
+            <h3>
+              Story View: Branching Map
+            </h3>
+
             <p>
               The Module 1 scenario has two decision points, each with
               three response paths, that converge on a reflection slide.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 05 -->
+
         <div class="screenshot-card">
+
           <a href="images/05-scenario-setup-slide.png" target="_blank">
+
             <img
               src="images/05-scenario-setup-slide.png"
               alt="Scenario setup slide introducing Priya, a strong analyst who seems unusually stressed"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>05 · Scenario Setup</span>
-            <h3>Setting the Scene</h3>
+
+            <span>
+              05 · Scenario Setup
+            </span>
+
+            <h3>
+              Setting the Scene
+            </h3>
+
             <p>
               A character-led slide places the learner in the role of a
               team lead who notices a strong performer behaving unusually.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 06 -->
+
         <div class="screenshot-card">
+
           <a href="images/06-storyline-decision-slide-triggers.png" target="_blank">
+
             <img
               src="images/06-storyline-decision-slide-triggers.png"
               alt="Storyline decision slide with three response options and the triggers that store the learner's choice"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>06 · Scenario Interaction</span>
-            <h3>Decision Point &amp; Triggers</h3>
+
+            <span>
+              06 · Scenario Interaction
+            </span>
+
+            <h3>
+              Decision Point &amp; Triggers
+            </h3>
+
             <p>
               Learners choose between three realistic responses. Each
               choice stores the selection and a response pattern in Storyline variables.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 07 -->
+
         <div class="screenshot-card">
+
           <a href="images/07-storyline-reflection-variables.png" target="_blank">
+
             <img
               src="images/07-storyline-reflection-variables.png"
               alt="Reflection slide in Storyline 360 displaying the learner's decision patterns through variables"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>07 · Personalised Reflection</span>
-            <h3>Reflection Slide</h3>
+
+            <span>
+              07 · Personalised Reflection
+            </span>
+
+            <h3>
+              Reflection Slide
+            </h3>
+
             <p>
               Variables carry both decisions into a personalised debrief
               on the learner's tendencies, with a restart option that resets the choices.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 08 -->
+
         <div class="screenshot-card">
+
           <a href="images/08-storyline-decision-2-jump-triggers.png" target="_blank">
+
             <img
               src="images/08-storyline-decision-2-jump-triggers.png"
               alt="Storyline trigger panel for Decision 2 showing variable assignments and jump-to-slide triggers"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>08 · Branching Logic</span>
-            <h3>Decision 2 Trigger Logic</h3>
+
+            <span>
+              08 · Branching Logic
+            </span>
+
+            <h3>
+              Decision 2 Trigger Logic
+            </h3>
+
             <p>
               Each option records the learner's choice and pattern,
               then jumps to its own consequence slide, creating the branching path.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 09 -->
+
         <div class="screenshot-card">
+
           <a href="images/09-knowledge-check-incorrect-feedback.png" target="_blank">
+
             <img
               src="images/09-knowledge-check-incorrect-feedback.png"
               alt="Knowledge check question with incorrect answer feedback"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>09 · Knowledge Check</span>
-            <h3>Feedback on an Incorrect Answer</h3>
+
+            <span>
+              09 · Knowledge Check
+            </span>
+
+            <h3>
+              Feedback on an Incorrect Answer
+            </h3>
+
             <p>
               Rather than only marking the answer wrong, the feedback
               explains why it falls short and prompts the learner to try again.
             </p>
+
           </div>
+
         </div>
 
 
         <!-- 10 -->
+
         <div class="screenshot-card">
+
           <a href="images/10-knowledge-check-correct-feedback.png" target="_blank">
+
             <img
               src="images/10-knowledge-check-correct-feedback.png"
               alt="Knowledge check question with correct answer feedback"
             >
+
           </a>
 
           <div class="screenshot-content">
-            <span>10 · Knowledge Check</span>
-            <h3>Feedback on the Correct Answer</h3>
+
+            <span>
+              10 · Knowledge Check
+            </span>
+
+            <h3>
+              Feedback on the Correct Answer
+            </h3>
+
             <p>
               Correct-answer feedback reinforces the reasoning behind
               the best response, not just the fact that it was right.
             </p>
+
           </div>
+
         </div>
+
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- DESIGN ARTIFACTS -->
+
   <section>
+
     <div class="container">
 
       <h2>Design Artifacts</h2>
@@ -1392,10 +1732,15 @@
         behind the Leadership Readiness Pathway.
       </p>
 
+
       <div class="artifact-grid">
 
+
         <div class="artifact-card">
-          <h3>Curriculum Map</h3>
+
+          <h3>
+            Curriculum Map
+          </h3>
 
           <p>
             Documents the overall learning architecture, module structure,
@@ -1409,11 +1754,15 @@
           >
             View Curriculum Map →
           </a>
+
         </div>
 
 
         <div class="artifact-card">
-          <h3>Storyboard</h3>
+
+          <h3>
+            Storyboard
+          </h3>
 
           <p>
             Shows the detailed scenario, interaction, feedback, and
@@ -1427,20 +1776,27 @@
           >
             View Storyboard →
           </a>
+
         </div>
+
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- FOOTER -->
+
   <footer>
+
     <div class="container">
       Sanjana Kashyap · Instructional Design Portfolio
     </div>
+
   </footer>
+
 
 </body>
 </html>
