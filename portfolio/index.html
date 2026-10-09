@@ -1,9 +1,5 @@
+```html
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
-  <meta c<!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +7,15 @@
 
   <title>Sanjana Kashyap | Instructional Design Portfolio</title>
 
+  <meta
+    name="description"
+    content="Explore Sanjana Kashyap's instructional design portfolio, featuring scenario-based learning, leadership development, onboarding, and interactive eLearning."
+  >
+
   <style>
+    /* =========================================================
+       GLOBAL STYLES
+       ========================================================= */
 
     * {
       box-sizing: border-box;
@@ -21,6 +25,7 @@
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
+      scroll-padding-top: 24px;
     }
 
     body {
@@ -41,6 +46,14 @@
       margin: 0 auto;
     }
 
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #AFC7C5;
+      outline-offset: 4px;
+    }
 
     /* =========================================================
        NAVIGATION
@@ -48,7 +61,7 @@
 
     .site-nav {
       background: #172033;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       position: relative;
       z-index: 10;
     }
@@ -58,31 +71,34 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
     }
 
     .nav-brand {
-      color: white;
+      color: #FFFFFF;
       text-decoration: none;
       font-size: 17px;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
     }
 
     .nav-links a {
       color: #C2CBD4;
       text-decoration: none;
       font-size: 14px;
-      transition: 0.2s ease;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #FFFFFF;
     }
-
 
     /* =========================================================
        HERO
@@ -90,7 +106,7 @@
 
     .hero {
       background: #172033;
-      color: white;
+      color: #FFFFFF;
       padding: 95px 0 110px;
       position: relative;
       overflow: hidden;
@@ -110,8 +126,8 @@
     .hero::after {
       content: "";
       position: absolute;
-      left: 75px;
-      right: 75px;
+      left: 6.5%;
+      right: 6.5%;
       bottom: 45px;
       height: 1px;
       background: rgba(175, 199, 197, 0.22);
@@ -120,18 +136,51 @@
     .hero-layout {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 70px;
+      gap: 60px;
       align-items: center;
     }
 
+    .eyebrow {
+      margin-bottom: 20px;
+      color: #AFC7C5;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 0 20px;
+      font-size: 58px;
+      line-height: 1.1;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-title {
+      max-width: 760px;
+      margin: 0 0 24px;
+      color: #E1E7EA;
+      font-size: 23px;
+      line-height: 1.5;
+    }
+
+    .hero-description {
+      max-width: 780px;
+      margin: 0;
+      color: #C2CBD4;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
     .hero-visual {
-      padding-left: 20px;
+      min-width: 0;
+      padding-left: 10px;
     }
 
     .focus-panel {
+      padding: 28px 30px;
       border: 1px solid rgba(175, 199, 197, 0.35);
       border-radius: 12px;
-      padding: 28px 30px;
       background: rgba(255, 255, 255, 0.035);
     }
 
@@ -150,8 +199,8 @@
     }
 
     .focus-item:first-of-type {
-      border-top: none;
       padding-top: 0;
+      border-top: none;
     }
 
     .focus-number {
@@ -174,41 +223,11 @@
       margin: 0;
       color: #C7D0D5;
       font-size: 13px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
-
-    .eyebrow {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      color: #AFC7C5;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 58px;
-      line-height: 1.05;
-      margin: 0 0 20px;
-      max-width: 850px;
-    }
-
-    .hero-title {
-      font-size: 23px;
-      color: #E1E7EA;
-      margin: 0 0 24px;
-      max-width: 760px;
-    }
-
-    .hero-description {
-      font-size: 19px;
-      color: #C2CBD4;
-      max-width: 780px;
-      margin: 0;
-    }
-
 
     /* =========================================================
-       SECTIONS
+       GENERAL SECTIONS
        ========================================================= */
 
     section {
@@ -216,69 +235,67 @@
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 1.2;
-      color: #172033;
       margin: 0 0 16px;
+      color: #172033;
+      font-size: 36px;
+      line-height: 1.25;
     }
 
     .section-intro {
       max-width: 780px;
-      font-size: 18px;
-      color: #59616B;
       margin: 0 0 40px;
+      color: #59616B;
+      font-size: 18px;
+      line-height: 1.7;
     }
 
-
     /* =========================================================
-       PROJECTS
+       PROJECT CARDS
        ========================================================= */
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 25px;
     }
 
     .project-card {
-      background: white;
-      border: 1px solid #E1E3E6;
-      border-radius: 14px;
-      padding: 32px;
-      box-shadow: 0 5px 20px rgba(23, 32, 51, 0.05);
-      transition: 0.2s ease;
+      min-width: 0;
       display: flex;
       flex-direction: column;
+      padding: 32px;
+      background: #FFFFFF;
+      border: 1px solid #E1E3E6;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(23, 32, 51, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .project-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.10);
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.1);
     }
 
     .project-label {
+      margin-bottom: 12px;
+      color: #2A7F7B;
       font-size: 12px;
+      font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #2A7F7B;
-      font-weight: bold;
-      margin-bottom: 12px;
     }
 
     .project-card h3 {
+      margin: 0 0 12px;
       color: #172033;
       font-size: 25px;
-      margin: 0 0 12px;
+      line-height: 1.35;
     }
 
     .project-card p {
+      margin: 0 0 25px;
       color: #59616B;
       font-size: 16px;
-      margin: 0 0 25px;
-    }
-
-    .project-card .button {
-      margin-top: auto;
     }
 
     .project-tags {
@@ -291,31 +308,34 @@
     .project-tag {
       display: inline-block;
       padding: 5px 10px;
-      border: 1px solid #D5DEDE;
-      border-radius: 20px;
       color: #236B68;
       background: #F5F7F7;
+      border: 1px solid #D5DEDE;
+      border-radius: 20px;
       font-size: 11px;
       font-weight: bold;
       letter-spacing: 0.7px;
       text-transform: uppercase;
     }
 
-
     /* =========================================================
-       BUTTON
+       BUTTONS
        ========================================================= */
 
     .button {
       display: inline-block;
       width: fit-content;
+      max-width: 100%;
+      margin-top: auto;
       padding: 13px 20px;
+      color: #FFFFFF;
       background: #2A7F7B;
-      color: white;
-      text-decoration: none;
+      border: none;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
-      transition: 0.2s ease;
+      line-height: 1.5;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .button:hover {
@@ -323,31 +343,13 @@
       transform: translateY(-1px);
     }
 
-
     /* =========================================================
-       STATUS
-       ========================================================= */
-
-    .status {
-      display: inline-block;
-      width: fit-content;
-      margin-top: auto;
-      padding: 6px 12px;
-      border-radius: 20px;
-      background: #E8F1F0;
-      color: #236B68;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-
-    /* =========================================================
-       TWO PROJECTS — TWO DESIGN APPROACHES
+       PROJECT COMPARISON
        ========================================================= */
 
     .project-comparison {
-      background: #F7F6F2;
       padding: 85px 0;
+      background: #F7F6F2;
     }
 
     .project-comparison h2 {
@@ -374,12 +376,11 @@
 
     .comparison-card {
       min-width: 0;
-      width: 100%;
+      padding: 38px 40px;
       background: #FFFFFF;
       border: 1px solid #D5DDE0;
       border-top: 4px solid #2A7F7B;
       border-radius: 16px;
-      padding: 38px 40px;
       box-shadow: 0 6px 20px rgba(23, 32, 51, 0.04);
     }
 
@@ -387,7 +388,7 @@
       margin: 0 0 10px;
       color: #172033;
       font-size: 28px;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     .comparison-focus {
@@ -409,8 +410,8 @@
     .comparison-card p {
       margin: 0;
       color: #40566D;
-      font-size: 17px;
-      line-height: 1.65;
+      font-size: 16px;
+      line-height: 1.7;
     }
 
     .comparison-skills {
@@ -437,7 +438,6 @@
       color: #2A7F7B;
       font-weight: bold;
     }
-
 
     /* =========================================================
        SHARED SKILLS
@@ -490,7 +490,6 @@
       line-height: 1.5;
     }
 
-
     /* =========================================================
        DIRECT COMPARISON
        ========================================================= */
@@ -510,7 +509,7 @@
       padding: 22px 28px;
       color: #40566D;
       font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .comparison-summary-cell:first-child {
@@ -524,7 +523,6 @@
       font-size: 17px;
     }
 
-
     /* =========================================================
        CAPABILITIES
        ========================================================= */
@@ -535,30 +533,30 @@
 
     .capability-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
     }
 
     .capability-card {
-      background: white;
-      border: 1px solid #E1E3E6;
-      border-radius: 12px;
       padding: 27px;
+      background: #FFFFFF;
+      border: 1px solid #E1E3E6;
       border-top: 3px solid #2A7F7B;
+      border-radius: 12px;
     }
 
     .capability-card h3 {
+      margin: 0 0 10px;
       color: #172033;
       font-size: 21px;
-      margin: 0 0 10px;
+      line-height: 1.4;
     }
 
     .capability-card p {
-      color: #59616B;
       margin: 0;
+      color: #59616B;
       font-size: 15px;
     }
-
 
     /* =========================================================
        DESIGN APPROACH
@@ -566,37 +564,37 @@
 
     .approach-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
     }
 
     .approach-card {
-      background: white;
+      padding: 27px;
+      background: #FFFFFF;
       border: 1px solid #E1E3E6;
       border-radius: 12px;
-      padding: 27px;
       box-shadow: 0 4px 16px rgba(23, 32, 51, 0.04);
     }
 
     .approach-number {
-      font-size: 13px;
       color: #2A7F7B;
+      font-size: 13px;
       font-weight: bold;
       letter-spacing: 1px;
     }
 
     .approach-card h3 {
+      margin: 8px 0 10px;
       color: #172033;
       font-size: 20px;
-      margin: 8px 0 10px;
+      line-height: 1.4;
     }
 
     .approach-card p {
-      color: #59616B;
       margin: 0;
+      color: #59616B;
       font-size: 15px;
     }
-
 
     /* =========================================================
        DESIGN PROCESS
@@ -607,11 +605,11 @@
     }
 
     .process-grid {
+      position: relative;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 0;
       margin-top: 55px;
-      position: relative;
     }
 
     .process-grid::before {
@@ -628,10 +626,8 @@
     .process-step {
       position: relative;
       z-index: 1;
+      padding: 0 20px;
       background: transparent;
-      padding: 0 28px;
-      border: none;
-      border-radius: 0;
       text-align: center;
     }
 
@@ -649,11 +645,11 @@
 
     .process-step strong {
       display: block;
+      margin-bottom: 10px;
       color: #2A7F7B;
       font-size: 12px;
       font-weight: bold;
       letter-spacing: 1.4px;
-      margin-bottom: 10px;
     }
 
     .process-step h3 {
@@ -664,128 +660,146 @@
     }
 
     .process-step p {
-      margin: 0 auto;
       max-width: 220px;
+      margin: 0 auto;
       color: #59616B;
       font-size: 14px;
       line-height: 1.6;
     }
+
     /* =========================================================
-EVALUATION & IMPACT
-========================================================= */
+       EVALUATION & IMPACT
+       ========================================================= */
 
-.evaluation-section {
-background: #F7F6F2;
-}
+    .evaluation-section {
+      background: #F7F6F2;
+    }
 
-.evaluation-card {
-display: grid;
-grid-template-columns: 1fr auto;
-align-items: center;
-gap: 35px;
-padding: 38px 40px;
-background: #FFFFFF;
-border: 1px solid #D5DDE0;
-border-left: 4px solid #2A7F7B;
-border-radius: 14px;
-box-shadow: 0 5px 20px rgba(23, 32, 51, 0.05);
-}
+    .evaluation-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      align-items: center;
+      gap: 25px;
+      padding: 38px 40px;
+      background: #FFFFFF;
+      border: 1px solid #D5DDE0;
+      border-left: 4px solid #2A7F7B;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(23, 32, 51, 0.05);
+    }
 
-.evaluation-label {
-color: #2A7F7B;
-font-size: 12px;
-font-weight: bold;
-letter-spacing: 1.8px;
-text-transform: uppercase;
-margin-bottom: 12px;
-}
+    .evaluation-label {
+      margin-bottom: 12px;
+      color: #2A7F7B;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
 
-.evaluation-card h3 {
-margin: 0 0 12px;
-color: #172033;
-font-size: 26px;
-}
+    .evaluation-card h3 {
+      margin: 0 0 12px;
+      color: #172033;
+      font-size: 26px;
+      line-height: 1.35;
+    }
 
-.evaluation-card p {
-max-width: 720px;
-margin: 0 0 18px;
-color: #59616B;
-font-size: 16px;
-}
+    .evaluation-card p {
+      max-width: 720px;
+      margin: 0 0 24px;
+      color: #59616B;
+      font-size: 16px;
+    }
 
-.evaluation-meta {
-color: #59616B;
-font-size: 13px;
-margin-top: 15px;
-}
+    .evaluation-card .button {
+      margin-top: 0;
+    }
 
-@media (max-width: 800px) {
-.evaluation-card {
-grid-template-columns: 1fr;
-padding: 28px;
-gap: 20px;
-}
+    .evaluation-meta {
+      margin-top: 15px;
+      color: #59616B;
+      font-size: 13px;
+    }
 
     /* =========================================================
        ABOUT
        ========================================================= */
 
+    .about {
+      background: #FFFFFF;
+    }
+
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
       gap: 55px;
       align-items: start;
     }
 
     .about-label {
+      margin-bottom: 14px;
+      color: #2A7F7B;
       font-size: 13px;
+      font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #2A7F7B;
-      font-weight: bold;
+    }
+
+    .about-grid h2 {
+      margin: 0;
+      font-size: 36px;
+      line-height: 1.3;
+    }
+
+    .about-content {
+      min-width: 0;
     }
 
     .about-content p {
+      margin: 0 0 20px;
       color: #4F5761;
       font-size: 17px;
-      margin-top: 0;
-      margin-bottom: 18px;
+      line-height: 1.8;
     }
 
+    .about-content p:last-child {
+      margin-bottom: 0;
+    }
 
     /* =========================================================
        CONTACT
        ========================================================= */
 
     .contact {
-      background: #F5F7F7;
       padding: 28px 0 44px;
       margin: 0;
+      background: #F5F7F7;
     }
 
     .contact-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+      gap: 40px;
+      align-items: center;
+      padding: 24px 0;
       border-top: 1px solid #D5DEDE;
       border-bottom: 1px solid #D5DEDE;
-      padding: 24px 0;
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 55px;
-      align-items: center;
     }
 
     .contact-heading {
+      margin: 0;
+      color: #2A7F7B;
       font-size: 13px;
+      font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #2A7F7B;
-      font-weight: bold;
-      margin: 0;
     }
 
     .contact-details {
       display: flex;
       align-items: center;
-      gap: 38px;
+      flex-wrap: wrap;
+      gap: 22px;
       margin: 0;
     }
 
@@ -793,6 +807,7 @@ gap: 20px;
       display: flex;
       align-items: center;
       gap: 10px;
+      min-width: 0;
       color: #172033;
       text-decoration: none;
     }
@@ -804,22 +819,23 @@ gap: 20px;
     .contact-icon {
       width: 20px;
       height: 20px;
-      color: #2A7F7B;
       flex-shrink: 0;
+      color: #2A7F7B;
     }
 
     .contact-value {
-      font-size: 16px;
+      overflow-wrap: anywhere;
       color: #172033;
+      font-size: 15px;
       transition: color 0.2s ease;
     }
 
     .contact-divider {
       width: 1px;
       height: 24px;
+      flex-shrink: 0;
       background: #CCD6D6;
     }
-
 
     /* =========================================================
        FOOTER
@@ -834,61 +850,105 @@ gap: 20px;
       font-size: 14px;
     }
 
-    footer .container {
-      margin-bottom: 0;
-    }
-
-
     /* =========================================================
-       RESPONSIVE
+       RESPONSIVE: TABLETS AND SMALLER SCREENS
        ========================================================= */
 
     @media (max-width: 800px) {
-
-      h1 {
-        font-size: 42px;
+      .container {
+        width: 88%;
       }
 
-      .projects,
-      .capability-grid,
-      .approach-grid,
-      .process-grid,
-      .about-grid {
-        grid-template-columns: 1fr;
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        gap: 12px 18px;
       }
 
       .hero {
         padding: 70px 0 80px;
       }
 
-      .about-grid {
-        gap: 25px;
-      }
-
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 16px 0;
-      }
-
-      .nav-links {
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
       .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 45px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
       }
 
       .hero-visual {
         padding-left: 0;
       }
 
+      h1 {
+        font-size: 44px;
+      }
+
+      .hero-title {
+        font-size: 21px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .projects,
+      .capability-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .project-comparison {
+        padding: 60px 0;
+      }
+
+      .project-comparison h2 {
+        font-size: 34px;
+      }
+
+      .comparison-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .comparison-card {
+        padding: 30px 28px;
+      }
+
+      .shared-skills {
+        padding: 30px 28px;
+      }
+
+      .shared-skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .comparison-summary-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .comparison-summary-cell:first-child {
+        border-right: none;
+        border-bottom: 1px solid #D5DDE0;
+      }
+
+      .approach-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .process-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 15px;
       }
 
       .process-grid::before {
@@ -896,12 +956,16 @@ gap: 20px;
       }
 
       .process-step {
-        padding: 0 20px;
+        padding: 0 12px;
+      }
+
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
       }
 
       .contact-box {
-        grid-template-columns: 1fr;
-        align-items: flex-start;
+        grid-template-columns: minmax(0, 1fr);
         gap: 22px;
       }
 
@@ -915,1141 +979,881 @@ gap: 20px;
         display: none;
       }
 
-      .contact-item {
-        flex-wrap: wrap;
+      .evaluation-card {
+        padding: 30px;
+      }
+    }
+
+    /* =========================================================
+       RESPONSIVE: MOBILE PHONES
+       ========================================================= */
+
+    @media (max-width: 480px) {
+      .container {
+        width: 90%;
       }
 
-      /* Comparison responsive */
+      .nav-brand {
+        font-size: 16px;
+      }
 
-      .project-comparison {
-        padding: 65px 0;
+      .nav-links {
+        gap: 8px 14px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 55px 0 65px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+      }
+
+      .hero-title {
+        font-size: 18px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .focus-panel {
+        padding: 24px 20px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      h2,
+      .about-grid h2 {
+        font-size: 29px;
+      }
+
+      .section-intro {
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .project-card,
+      .capability-card,
+      .approach-card {
+        padding: 24px;
+      }
+
+      .project-card h3 {
+        font-size: 22px;
       }
 
       .project-comparison h2 {
-        font-size: 34px;
+        font-size: 30px;
       }
 
-      .comparison-grid {
-        grid-template-columns: 1fr;
+      .project-comparison-intro {
+        font-size: 16px;
       }
 
       .comparison-card {
-        padding: 30px 28px;
+        padding: 25px 22px;
+      }
+
+      .comparison-card h3 {
+        font-size: 24px;
       }
 
       .comparison-skills {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
       }
 
       .shared-skills {
-        padding: 30px 28px;
+        padding: 25px 22px;
+      }
+
+      .shared-skills h3 {
+        font-size: 24px;
       }
 
       .shared-skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
       }
 
-      .comparison-summary-row {
-        grid-template-columns: 1fr;
+      .comparison-summary-cell {
+        padding: 20px 10px;
       }
 
-      .comparison-summary-cell:first-child {
-        border-right: none;
-        border-bottom: 1px solid #D5DDE0;
+      .approach-grid,
+      .process-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
 
+      .process-grid {
+        gap: 35px;
+      }
+
+      .process-step {
+        padding: 0 10px;
+      }
+
+      .evaluation-card {
+        padding: 25px 22px;
+      }
+
+      .evaluation-card h3 {
+        font-size: 23px;
+      }
+
+      .evaluation-card .button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .about-content p {
+        font-size: 16px;
+      }
+
+      .contact-value {
+        font-size: 14px;
+      }
     }
 
-  </style>
+    /* =========================================================
+       REDUCED MOTION ACCESSIBILITY
+       ========================================================= */
 
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
 
   <!-- =========================================================
        NAVIGATION
        ========================================================= -->
 
-  <nav class="site-nav">
-
+  <nav class="site-nav" aria-label="Main navigation">
     <div class="container nav-inner">
 
-      <span class="nav-brand">
+      <a class="nav-brand" href="#top">
         Sanjana Kashyap
-      </span>
+      </a>
 
       <div class="nav-links">
-
         <a href="#work">Work</a>
-
         <a href="#capabilities">Capabilities</a>
-
         <a href="#approach">Approach</a>
-
         <a href="#process">Process</a>
-
+        <a href="#evaluation">Evaluation</a>
         <a href="#about">About</a>
-
         <a href="#contact">Contact</a>
-
       </div>
 
     </div>
-
   </nav>
 
+  <main id="top">
 
-  <!-- =========================================================
-       HERO
-       ========================================================= -->
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
 
-  <header class="hero">
+    <header class="hero">
+      <div class="container">
 
-    <div class="container">
+        <div class="hero-layout">
 
-      <div class="hero-layout">
-
-
-        <!-- HERO TEXT -->
-
-        <div>
-
-          <div class="eyebrow">
-            Instructional Design Portfolio
-          </div>
-
-          <h1>
-            Sanjana Kashyap
-          </h1>
-
-          <p class="hero-title">
-            Instructional Designer · Learning Experience Designer
-          </p>
-
-          <p class="hero-description">
-            Designing practical, scenario based learning experiences that help
-            people make better decisions, apply new skills, and perform with
-            confidence.
-          </p>
-
-        </div>
-
-
-        <!-- HERO LEARNING FLOW -->
-
-        <div class="hero-visual">
-
-          <div class="focus-panel">
-
-            <h2 class="focus-heading">
-              What I Focus On
-            </h2>
-
-            <div class="focus-item">
-
-              <span class="focus-number">
-                01
-              </span>
-
-              <h3>
-                Scenario-Based Learning
-              </h3>
-
-              <p>
-                Realistic situations that help learners practise
-                judgment and decision-making.
-              </p>
-
+          <div>
+            <div class="eyebrow">
+              Instructional Design Portfolio
             </div>
 
+            <h1>Sanjana Kashyap</h1>
 
-            <div class="focus-item">
-
-              <span class="focus-number">
-                02
-              </span>
-
-              <h3>
-                Interactive eLearning
-              </h3>
-
-              <p>
-                Purposeful interaction, feedback, and learner
-                practice built in Rise 360 and Storyline 360.
-              </p>
-
-            </div>
-
-
-            <div class="focus-item">
-
-              <span class="focus-number">
-                03
-              </span>
-
-              <h3>
-                Learning for Performance
-              </h3>
-
-              <p>
-                Practical learning experiences connected to what
-                people need to do, not just what they need to know.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </header>
-
-
-  <!-- =========================================================
-       SELECTED WORK
-       ========================================================= -->
-
-  <section id="work">
-
-    <div class="container">
-
-      <h2>
-        Selected Instructional Design Work
-      </h2>
-
-      <p class="section-intro">
-        Explore learning experiences that demonstrate my approach to
-        curriculum architecture, scenario design, storyboarding, and
-        interactive eLearning development.
-      </p>
-
-
-      <!-- PROJECT CARDS -->
-
-      <div class="projects">
-
-
-        <!-- LEADERSHIP -->
-
-        <div class="project-card">
-
-          <div class="project-label">
-            Featured · Fully Built
-          </div>
-
-          <h3>
-            Leadership Readiness Pathway
-          </h3>
-
-          <p>
-            A scenario based leadership learning experience built in
-            Rise 360 with Storyline 360. The pathway develops practical
-            judgment for promotion track individual contributors preparing
-            to step into leadership.
-          </p>
-
-          <div class="project-tags">
-
-            <span class="project-tag">
-              Rise 360
-            </span>
-
-            <span class="project-tag">
-              Storyline 360
-            </span>
-
-            <span class="project-tag">
-              Scenario Design
-            </span>
-
-            <span class="project-tag">
-              Branching
-            </span>
-
-          </div>
-
-          <a
-            class="button"
-            href="projects/leadership/index.html"
-          >
-            View Project →
-          </a>
-
-        </div>
-
-
-        <!-- NEXATECH -->
-
-        <div class="project-card">
-
-          <div class="project-label">
-            Fully Built · Rise + Storyline
-          </div>
-
-          <h3>
-            NexaTech Onboarding Pathway
-          </h3>
-
-          <p>
-            A structured onboarding learning experience designed to help
-            new employees understand the organisation, make sound workplace
-            decisions, find the right resources, and take confident action.
-          </p>
-
-          <div class="project-tags">
-
-            <span class="project-tag">
-              Rise 360
-            </span>
-
-            <span class="project-tag">
-              Storyline 360
-            </span>
-
-            <span class="project-tag">
-              Scenario Design
-            </span>
-
-            <span class="project-tag">
-              Decision-Based Learning
-            </span>
-
-          </div>
-
-          <a
-            class="button"
-            href="projects/nexatech/index.html"
-          >
-            View Project →
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- =========================================================
-           TWO PROJECTS — TWO DESIGN APPROACHES
-
-           IMPORTANT:
-           This section is OUTSIDE the .projects grid.
-           ========================================================= -->
-
-      <section class="project-comparison">
-
-        <div class="container">
-
-          <h2>
-            Two Projects, Two Design Approaches
-          </h2>
-
-          <p class="project-comparison-intro">
-            Together, these projects demonstrate two different approaches to
-            instructional design. Leadership Readiness focuses on scenario-based
-            decision making and deeper Storyline 360 development, while NexaTech
-            explores structured Rise 360 course architecture, onboarding design,
-            and the learner journey across a broader program.
-          </p>
-
-
-          <!-- COMPARISON CARDS -->
-
-          <div class="comparison-grid">
-
-
-            <!-- LEADERSHIP -->
-
-            <div class="comparison-card">
-
-              <h3>
-                Leadership Readiness Pathway
-              </h3>
-
-              <p class="comparison-focus">
-                Scenario-Based Learning · Storyline 360
-              </p>
-
-              <h4>
-                Primary Focus
-              </h4>
-
-              <p>
-                Interactive leadership scenarios that allow learners to practise
-                judgment, make decisions, experience consequences, and reflect
-                on their choices.
-              </p>
-
-              <h4>
-                Skills Demonstrated
-              </h4>
-
-              <ul class="comparison-skills">
-
-                <li>
-                  Storyline 360 development
-                </li>
-
-                <li>
-                  Branching scenario design
-                </li>
-
-                <li>
-                  Variables and triggers
-                </li>
-
-                <li>
-                  Consequence-based feedback
-                </li>
-
-                <li>
-                  Path-dependent interaction
-                </li>
-
-                <li>
-                  Personalised learner reflection
-                </li>
-
-                <li>
-                  Scenario-based assessment
-                </li>
-
-                <li>
-                  Higher-complexity decision design
-                </li>
-
-              </ul>
-
-              <h4>
-                What This Project Demonstrates
-              </h4>
-
-              <p>
-                Leadership Readiness demonstrates deeper exploration of
-                interactive Storyline development. Each module is designed
-                around scenario-based practice, with Storyline used to create
-                branching interactions, store learner choices, control
-                consequences, and support personalised reflection.
-              </p>
-
-            </div>
-
-
-            <!-- NEXATECH -->
-
-            <div class="comparison-card">
-
-              <h3>
-                NexaTech Onboarding Pathway
-              </h3>
-
-              <p class="comparison-focus">
-                Course Architecture · Rise 360
-              </p>
-
-              <h4>
-                Primary Focus
-              </h4>
-
-              <p>
-                A structured onboarding experience focused on organising
-                learning content, sequencing modules, guiding learners through
-                the program, and creating a cohesive Rise 360 experience.
-              </p>
-
-              <h4>
-                Skills Demonstrated
-              </h4>
-
-              <ul class="comparison-skills">
-
-                <li>
-                  Rise 360 course development
-                </li>
-
-                <li>
-                  Curriculum architecture
-                </li>
-
-                <li>
-                  Module sequencing
-                </li>
-
-                <li>
-                  Onboarding experience design
-                </li>
-
-                <li>
-                  Content organisation
-                </li>
-
-                <li>
-                  Learner navigation
-                </li>
-
-                <li>
-                  Lesson and interaction structure
-                </li>
-
-                <li>
-                  Visual experience design in Rise
-                </li>
-
-              </ul>
-
-              <h4>
-                What This Project Demonstrates
-              </h4>
-
-              <p>
-                NexaTech demonstrates broader exploration of Rise 360 as a
-                course-development environment, with emphasis on structuring
-                the learner journey, organising onboarding content, sequencing
-                modules, and creating a cohesive learning experience across
-                the program.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <!-- SHARED SKILLS -->
-
-          <div class="shared-skills">
-
-            <h3>
-              Skills Across Both Projects
-            </h3>
-
-            <p class="shared-skills-intro">
-              While the development emphasis differs, both projects demonstrate
-              the ability to move from an instructional need to a structured,
-              purposeful learning experience.
+            <p class="hero-title">
+              Instructional Designer · Learning Experience Designer
             </p>
 
-            <div class="shared-skills-grid">
+            <p class="hero-description">
+              Designing practical, scenario-based learning experiences
+              that help people make better decisions, apply new skills,
+              and perform with confidence.
+            </p>
+          </div>
 
-              <div class="shared-skill">
+          <div class="hero-visual">
+            <div class="focus-panel">
 
-                <strong>
-                  Instructional Strategy
-                </strong>
+              <h2 class="focus-heading">What I Focus On</h2>
 
-                <span>
-                  Translating learning needs into structured learning experiences.
-                </span>
-
+              <div class="focus-item">
+                <span class="focus-number">01</span>
+                <h3>Scenario-Based Learning</h3>
+                <p>
+                  Realistic situations that help learners practise
+                  judgment and decision-making.
+                </p>
               </div>
 
-
-              <div class="shared-skill">
-
-                <strong>
-                  Learning Architecture
-                </strong>
-
-                <span>
-                  Sequencing objectives, content, activities, and learner progression.
-                </span>
-
+              <div class="focus-item">
+                <span class="focus-number">02</span>
+                <h3>Interactive eLearning</h3>
+                <p>
+                  Purposeful interaction, feedback, and learner
+                  practice built in Rise 360 and Storyline 360.
+                </p>
               </div>
 
-
-              <div class="shared-skill">
-
-                <strong>
-                  Scenario Design
-                </strong>
-
-                <span>
-                  Using realistic workplace situations to move learners beyond recall.
-                </span>
-
+              <div class="focus-item">
+                <span class="focus-number">03</span>
+                <h3>Learning for Performance</h3>
+                <p>
+                  Practical learning experiences connected to what
+                  people need to do, not just what they need to know.
+                </p>
               </div>
 
+            </div>
+          </div>
 
-              <div class="shared-skill">
+        </div>
 
-                <strong>
-                  Interactive Learning
-                </strong>
+      </div>
+    </header>
 
-                <span>
-                  Designing meaningful learner decisions, interactions, and feedback.
-                </span>
+    <!-- =========================================================
+         SELECTED WORK
+         ========================================================= -->
 
-              </div>
+    <section id="work">
+      <div class="container">
 
+        <h2>Selected Instructional Design Work</h2>
 
-              <div class="shared-skill">
+        <p class="section-intro">
+          Explore learning experiences that demonstrate my approach
+          to curriculum architecture, scenario design, storyboarding,
+          and interactive eLearning development.
+        </p>
 
-                <strong>
-                  Articulate Development
-                </strong>
+        <div class="projects">
 
-                <span>
-                  Working across Rise 360 and Storyline 360 for different instructional needs.
-                </span>
+          <article class="project-card">
 
-              </div>
+            <div class="project-label">Featured · Fully Built</div>
 
+            <h3>Leadership Readiness Pathway</h3>
 
-              <div class="shared-skill">
+            <p>
+              A scenario-based leadership learning experience built in
+              Rise 360 with Storyline 360. The pathway develops practical
+              judgment for promotion-track individual contributors
+              preparing to step into leadership.
+            </p>
 
-                <strong>
-                  Learner Experience
-                </strong>
+            <div class="project-tags">
+              <span class="project-tag">Rise 360</span>
+              <span class="project-tag">Storyline 360</span>
+              <span class="project-tag">Scenario Design</span>
+              <span class="project-tag">Branching</span>
+            </div>
 
-                <span>
-                  Designing clear navigation, progression, feedback, and reflection.
-                </span>
+            <a class="button" href="projects/leadership/index.html">
+              View Project →
+            </a>
 
-              </div>
+          </article>
 
+          <article class="project-card">
+
+            <div class="project-label">Fully Built · Rise + Storyline</div>
+
+            <h3>NexaTech Onboarding Pathway</h3>
+
+            <p>
+              A structured onboarding learning experience designed to
+              help new employees understand the organisation, make sound
+              workplace decisions, find the right resources, and take
+              confident action.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Rise 360</span>
+              <span class="project-tag">Storyline 360</span>
+              <span class="project-tag">Scenario Design</span>
+              <span class="project-tag">Decision-Based Learning</span>
+            </div>
+
+            <a class="button" href="projects/nexatech/index.html">
+              View Project →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TWO PROJECTS — TWO DESIGN APPROACHES
+         ========================================================= -->
+
+    <section class="project-comparison" aria-labelledby="comparison-title">
+      <div class="container">
+
+        <h2 id="comparison-title">Two Projects, Two Design Approaches</h2>
+
+        <p class="project-comparison-intro">
+          Together, these projects demonstrate two different approaches
+          to instructional design. Leadership Readiness focuses on
+          scenario-based decision-making and deeper Storyline 360
+          development, while NexaTech explores structured Rise 360
+          course architecture, onboarding design, and the learner journey
+          across a broader program.
+        </p>
+
+        <div class="comparison-grid">
+
+          <article class="comparison-card">
+
+            <h3>Leadership Readiness Pathway</h3>
+
+            <p class="comparison-focus">
+              Scenario-Based Learning · Storyline 360
+            </p>
+
+            <h4>Primary Focus</h4>
+
+            <p>
+              Interactive leadership scenarios that allow learners to
+              practise judgment, make decisions, experience consequences,
+              and reflect on their choices.
+            </p>
+
+            <h4>Skills Demonstrated</h4>
+
+            <ul class="comparison-skills">
+              <li>Storyline 360 development</li>
+              <li>Branching scenario design</li>
+              <li>Variables and triggers</li>
+              <li>Consequence-based feedback</li>
+              <li>Path-dependent interaction</li>
+              <li>Personalised learner reflection</li>
+              <li>Scenario-based assessment</li>
+              <li>Higher-complexity decision design</li>
+            </ul>
+
+            <h4>What This Project Demonstrates</h4>
+
+            <p>
+              Leadership Readiness demonstrates deeper exploration of
+              interactive Storyline development. Each module is designed
+              around scenario-based practice, with Storyline used to
+              create branching interactions, store learner choices,
+              control consequences, and support personalised reflection.
+            </p>
+
+          </article>
+
+          <article class="comparison-card">
+
+            <h3>NexaTech Onboarding Pathway</h3>
+
+            <p class="comparison-focus">
+              Course Architecture · Rise 360
+            </p>
+
+            <h4>Primary Focus</h4>
+
+            <p>
+              A structured onboarding experience focused on organising
+              learning content, sequencing modules, guiding learners
+              through the program, and creating a cohesive Rise 360
+              experience.
+            </p>
+
+            <h4>Skills Demonstrated</h4>
+
+            <ul class="comparison-skills">
+              <li>Rise 360 course development</li>
+              <li>Curriculum architecture</li>
+              <li>Module sequencing</li>
+              <li>Onboarding experience design</li>
+              <li>Content organisation</li>
+              <li>Learner navigation</li>
+              <li>Lesson and interaction structure</li>
+              <li>Visual experience design in Rise</li>
+            </ul>
+
+            <h4>What This Project Demonstrates</h4>
+
+            <p>
+              NexaTech demonstrates broader exploration of Rise 360 as a
+              course-development environment, with emphasis on structuring
+              the learner journey, organising onboarding content, sequencing
+              modules, and creating a cohesive learning experience across
+              the program.
+            </p>
+
+          </article>
+
+        </div>
+
+        <div class="shared-skills">
+
+          <h3>Skills Across Both Projects</h3>
+
+          <p class="shared-skills-intro">
+            While the development emphasis differs, both projects
+            demonstrate the ability to move from an instructional need
+            to a structured, purposeful learning experience.
+          </p>
+
+          <div class="shared-skills-grid">
+
+            <div class="shared-skill">
+              <strong>Instructional Strategy</strong>
+              <span>
+                Translating learning needs into structured learning
+                experiences.
+              </span>
+            </div>
+
+            <div class="shared-skill">
+              <strong>Learning Architecture</strong>
+              <span>
+                Sequencing objectives, content, activities, and learner
+                progression.
+              </span>
+            </div>
+
+            <div class="shared-skill">
+              <strong>Scenario Design</strong>
+              <span>
+                Using realistic workplace situations to move learners
+                beyond recall.
+              </span>
+            </div>
+
+            <div class="shared-skill">
+              <strong>Interactive Learning</strong>
+              <span>
+                Designing meaningful learner decisions, interactions,
+                and feedback.
+              </span>
+            </div>
+
+            <div class="shared-skill">
+              <strong>Articulate Development</strong>
+              <span>
+                Working across Rise 360 and Storyline 360 for different
+                instructional needs.
+              </span>
+            </div>
+
+            <div class="shared-skill">
+              <strong>Learner Experience</strong>
+              <span>
+                Designing clear navigation, progression, feedback,
+                and reflection.
+              </span>
             </div>
 
           </div>
 
+        </div>
 
-          <!-- DIRECT COMPARISON -->
+        <div class="comparison-summary">
 
-          <div class="comparison-summary">
+          <div class="comparison-summary-row">
 
-            <div class="comparison-summary-row">
+            <div class="comparison-summary-cell">
+              <strong>Leadership Readiness</strong>
+              Greater emphasis on interaction depth,
+              branching scenarios, variables, triggers, consequences,
+              and personalised reflection.
+            </div>
 
-              <div class="comparison-summary-cell">
-
-                <strong>
-                  Leadership Readiness
-                </strong>
-
-                Greater emphasis on
-                <strong>interaction depth</strong>,
-                branching scenarios, variables, triggers,
-                consequences, and personalised reflection.
-
-              </div>
-
-
-              <div class="comparison-summary-cell">
-
-                <strong>
-                  NexaTech
-                </strong>
-
-                Greater emphasis on
-                <strong>course architecture and breadth</strong>,
-                Rise 360 development, onboarding structure,
-                sequencing, and learner navigation.
-
-              </div>
-
+            <div class="comparison-summary-cell">
+              <strong>NexaTech</strong>
+              Greater emphasis on course architecture and breadth,
+              Rise 360 development, onboarding structure, sequencing,
+              and learner navigation.
             </div>
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+    </section>
 
-    </div>
+    <!-- =========================================================
+         CAPABILITIES
+         ========================================================= -->
 
-  </section>
+    <section id="capabilities" class="capabilities">
+      <div class="container">
 
+        <h2>What I Do</h2>
 
-  <!-- =========================================================
-       CAPABILITIES
-       ========================================================= -->
+        <p class="section-intro">
+          I combine my background in teaching and curriculum development
+          with instructional design practices to create purposeful
+          digital learning experiences.
+        </p>
 
-  <section id="capabilities" class="capabilities">
+        <div class="capability-grid">
 
-    <div class="container">
+          <article class="capability-card">
+            <h3>Learning Experience Design</h3>
+            <p>
+              Designing learning journeys around clear objectives,
+              learner needs, meaningful practice, and real-world application.
+            </p>
+          </article>
 
-      <h2>
-        What I Do
-      </h2>
+          <article class="capability-card">
+            <h3>Scenario-Based eLearning</h3>
+            <p>
+              Creating realistic situations where learners practise
+              judgment, make decisions, and experience the consequences
+              of their choices.
+            </p>
+          </article>
 
-      <p class="section-intro">
-        I combine my background in teaching and curriculum development
-        with instructional design practices to create purposeful digital
-        learning experiences.
-      </p>
+          <article class="capability-card">
+            <h3>Curriculum and Storyboard Design</h3>
+            <p>
+              Translating learning goals into structured curriculum maps,
+              storyboards, interactions, and assessment opportunities.
+            </p>
+          </article>
 
-      <div class="capability-grid">
-
-
-        <div class="capability-card">
-
-          <h3>
-            Learning Experience Design
-          </h3>
-
-          <p>
-            Designing learning journeys around clear objectives, learner
-            needs, meaningful practice, and real world application.
-          </p>
-
-        </div>
-
-
-        <div class="capability-card">
-
-          <h3>
-            Scenario Based eLearning
-          </h3>
-
-          <p>
-            Creating realistic situations where learners practice judgment,
-            make decisions, and experience the consequences of their choices.
-          </p>
-
-        </div>
-
-
-        <div class="capability-card">
-
-          <h3>
-            Curriculum and Storyboard Design
-          </h3>
-
-          <p>
-            Translating learning goals into structured curriculum maps,
-            storyboards, interactions, and assessment opportunities.
-          </p>
-
-        </div>
-
-
-        <div class="capability-card">
-
-          <h3>
-            Interactive Development
-          </h3>
-
-          <p>
-            Building interactive learning experiences using Articulate
-            Rise 360 and Storyline 360.
-          </p>
+          <article class="capability-card">
+            <h3>Interactive Development</h3>
+            <p>
+              Building interactive learning experiences using Articulate
+              Rise 360 and Storyline 360.
+            </p>
+          </article>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
+    <!-- =========================================================
+         DESIGN APPROACH
+         ========================================================= -->
 
-  </section>
+    <section id="approach">
+      <div class="container">
 
+        <h2>Design Approach</h2>
 
-  <!-- =========================================================
-       DESIGN APPROACH
-       ========================================================= -->
+        <p class="section-intro">
+          I design for what learners need to do, not just what they
+          need to know. My approach combines the structure of curriculum
+          design with the practical focus of workplace learning.
+        </p>
 
-  <section id="approach">
+        <div class="approach-grid">
 
-    <div class="container">
+          <article class="approach-card">
+            <div class="approach-number">01</div>
+            <h3>Start with the Learning Problem</h3>
+            <p>
+              Identify the performance need before deciding on the
+              learning solution.
+            </p>
+          </article>
 
-      <h2>
-        Design Approach
-      </h2>
+          <article class="approach-card">
+            <div class="approach-number">02</div>
+            <h3>Design for Practice</h3>
+            <p>
+              Give learners opportunities to apply judgment, make
+              decisions, and work through realistic situations.
+            </p>
+          </article>
 
-      <p class="section-intro">
-        I design for what learners need to do, not just what they need
-        to know. My approach combines the structure of curriculum design
-        with the practical focus of workplace learning.
-      </p>
-
-      <div class="approach-grid">
-
-
-        <div class="approach-card">
-
-          <div class="approach-number">
-            01
-          </div>
-
-          <h3>
-            Start with the Learning Problem
-          </h3>
-
-          <p>
-            Identify the performance need before deciding on the learning
-            solution.
-          </p>
-
-        </div>
-
-
-        <div class="approach-card">
-
-          <div class="approach-number">
-            02
-          </div>
-
-          <h3>
-            Design for Practice
-          </h3>
-
-          <p>
-            Give learners opportunities to apply judgment, make decisions,
-            and work through realistic situations.
-          </p>
-
-        </div>
-
-
-        <div class="approach-card">
-
-          <div class="approach-number">
-            03
-          </div>
-
-          <h3>
-            Make Interaction Meaningful
-          </h3>
-
-          <p>
-            Use branching, feedback, consequences, and reflection when
-            they support the learning goal.
-          </p>
+          <article class="approach-card">
+            <div class="approach-number">03</div>
+            <h3>Make Interaction Meaningful</h3>
+            <p>
+              Use branching, feedback, consequences, and reflection
+              when they support the learning goal.
+            </p>
+          </article>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
+    <!-- =========================================================
+         DESIGN PROCESS
+         ========================================================= -->
 
-  </section>
+    <section id="process" class="process">
+      <div class="container">
 
+        <h2>My Design Process</h2>
 
-  <!-- =========================================================
-       DESIGN PROCESS
-       ========================================================= -->
+        <p class="section-intro">
+          I connect learning needs, instructional strategy, and
+          development throughout the design process.
+        </p>
 
-  <section id="process" class="process">
+        <div class="process-grid">
 
-    <div class="container">
+          <article class="process-step">
+            <strong>01 · DISCOVER</strong>
+            <h3>Understand</h3>
+            <p>
+              Identify the audience, performance need, and learning goals.
+            </p>
+          </article>
 
-      <h2>
-        My Design Process
-      </h2>
+          <article class="process-step">
+            <strong>02 · DESIGN</strong>
+            <h3>Structure</h3>
+            <p>
+              Build the learning architecture, objectives, scenarios,
+              and storyboard.
+            </p>
+          </article>
 
-      <p class="section-intro">
-        I connect learning needs, instructional strategy, and development
-        throughout the design process.
-      </p>
+          <article class="process-step">
+            <strong>03 · DEVELOP</strong>
+            <h3>Build</h3>
+            <p>
+              Turn the design into an interactive learning experience
+              using Rise 360 and Storyline 360.
+            </p>
+          </article>
 
-      <div class="process-grid">
-
-
-        <div class="process-step">
-
-          <strong>
-            01 · DISCOVER
-          </strong>
-
-          <h3>
-            Understand
-          </h3>
-
-          <p>
-            Identify the audience, performance need, and learning goals.
-          </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-          <strong>
-            02 · DESIGN
-          </strong>
-
-          <h3>
-            Structure
-          </h3>
-
-          <p>
-            Build the learning architecture, objectives, scenarios,
-            and storyboard.
-          </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-          <strong>
-            03 · DEVELOP
-          </strong>
-
-          <h3>
-            Build
-          </h3>
-
-          <p>
-            Turn the design into an interactive learning experience using
-            Rise 360 and Storyline 360.
-          </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-          <strong>
-            04 · REFLECT
-          </strong>
-
-          <h3>
-            Refine
-          </h3>
-
-          <p>
-            Review the learner experience and refine the design based
-            on what the interaction is meant to accomplish.
-          </p>
+          <article class="process-step">
+            <strong>04 · REFLECT</strong>
+            <h3>Refine</h3>
+            <p>
+              Review the learner experience and refine the design based
+              on what the interaction is meant to accomplish.
+            </p>
+          </article>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
+    <!-- =========================================================
+         EVALUATION & IMPACT
+         ========================================================= -->
 
-  </section>
-  <!-- =========================================================
-     EVALUATION & IMPACT
-     ========================================================= -->
+    <section id="evaluation" class="evaluation-section">
+      <div class="container">
 
-<section class="evaluation-section" id="evaluation">
+        <div class="evaluation-card">
 
-  <div class="container">
-
-```
-<div class="evaluation-card">
-
-  <div>
-
-    <div class="evaluation-label">
-      Evaluation & Impact
-    </div>
-
-    <h3>
-      Evaluating Learning Beyond Completion
-    </h3>
-
-    <p>
-      Explore my approach to evaluating learner experience,
-      measuring learning outcomes, and investigating how learning
-      may translate into workplace application and performance.
-    </p>
-
-    <a
-      class="button"
-      href="documents/Portfolio%20Evaluation%20and%20Impact%20Plan.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      View Evaluation & Impact Plan →
-    </a>
-
-    <div class="evaluation-meta">
-      Portfolio resource · PDF document
-    </div>
-
-  </div>
-
-</div>
-```
-
-  </div>
-
-</section>
-
-
-
-  <!-- =========================================================
-       ABOUT
-       ========================================================= -->
-
-  <section id="about">
-
-    <div class="container">
-
-      <div class="about-grid">
-
-
-        <div>
-
-          <div class="about-label">
-            About Me
+          <div class="evaluation-label">
+            Evaluation &amp; Impact
           </div>
 
-          <h2>
-            From classroom learning to digital learning experiences.
-          </h2>
-
-        </div>
-
-
-        <div class="about-content">
+          <h3>Evaluating Learning Beyond Completion</h3>
 
           <p>
-            With a Master’s in Zoology and a Bachelor’s in Education,
-            I combine subject-matter expertise with professional experience
-            in teaching, curriculum development, and designing meaningful
-            learning experiences.
+            Explore my approach to evaluating learner experience,
+            measuring learning outcomes, and investigating how learning
+            may translate into workplace application and performance.
           </p>
-
-          <p>
-            My work in education has given me a strong foundation in
-            understanding learners, structuring learning experiences,
-            and translating complex ideas into accessible instruction.
-          </p>
-
-          <p>
-            I am now transitioning into instructional design, bringing
-            that foundation into the design of digital and workplace
-            learning experiences.
-          </p>
-
-          <p>
-            My portfolio focuses on scenario based learning, curriculum
-            architecture, interactive eLearning, and thoughtful learner
-            practice. I am particularly interested in creating learning
-            experiences that are purposeful, practical, and connected to
-            what learners actually need to do.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       CONTACT
-       ========================================================= -->
-
-  <section id="contact" class="contact">
-
-    <div class="container">
-
-      <div class="contact-box">
-
-        <h2 class="contact-heading">
-          Contact
-        </h2>
-
-        <div class="contact-details">
-
 
           <a
-            href="tel:+917204283998"
-            class="contact-item"
-            aria-label="Call Sanjana Kashyap"
+            class="button"
+            href="documents/Portfolio%20Evaluation%20and%20Impact%20Plan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-
-            <svg
-              class="contact-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2
-                19.79 19.79 0 0 1-8.63-3.07
-                19.5 19.5 0 0 1-6-6
-                19.79 19.79 0 0 1-3.07-8.67
-                A2 2 0 0 1 4.11 2h3
-                a2 2 0 0 1 2 1.72
-                12.84 12.84 0 0 0 .7 2.81
-                2 2 0 0 1-.45 2.11L8.09 9.91
-                a16 16 0 0 0 6 6l1.27-1.27
-                a2 2 0 0 1 2.11-.45
-                12.84 12.84 0 0 0 2.81.7
-                A2 2 0 0 1 22 16.92z"
-              />
-
-            </svg>
-
-            <span class="contact-value">
-              +91 72042 83998
-            </span>
-
+            View Evaluation &amp; Impact Plan →
           </a>
 
-
-          <span class="contact-divider"></span>
-
-
-          <a
-            href="mailto:sanjanakashyap1015@gmail.com"
-            class="contact-item"
-            aria-label="Email Sanjana Kashyap"
-          >
-
-            <svg
-              class="contact-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-
-              <rect
-                x="3"
-                y="5"
-                width="18"
-                height="14"
-                rx="2"
-              />
-
-              <polyline
-                points="3,7 12,13 21,7"
-              />
-
-            </svg>
-
-            <span class="contact-value">
-              sanjanakashyap1015@gmail.com
-            </span>
-
-          </a>
+          <div class="evaluation-meta">
+            Portfolio resource · PDF document
+          </div>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
+    <!-- =========================================================
+         ABOUT
+         ========================================================= -->
 
-  </section>
+    <section id="about" class="about">
+      <div class="container">
 
+        <div class="about-grid">
+
+          <div>
+            <div class="about-label">About Me</div>
+
+            <h2>
+              From classroom learning to digital learning experiences.
+            </h2>
+          </div>
+
+          <div class="about-content">
+
+            <p>
+              With a Master’s in Zoology and a Bachelor’s in Education,
+              I combine subject-matter expertise with professional
+              experience in teaching, curriculum development, and
+              designing meaningful learning experiences.
+            </p>
+
+            <p>
+              My work in education has given me a strong foundation in
+              understanding learners, structuring learning experiences,
+              and translating complex ideas into accessible instruction.
+            </p>
+
+            <p>
+              I am now transitioning into instructional design, bringing
+              that foundation into the design of digital and workplace
+              learning experiences.
+            </p>
+
+            <p>
+              My portfolio focuses on scenario-based learning, curriculum
+              architecture, interactive eLearning, and thoughtful learner
+              practice. I am particularly interested in creating learning
+              experiences that are purposeful, practical, and connected
+              to what learners actually need to do.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="contact-box">
+
+          <h2 class="contact-heading">Contact</h2>
+
+          <div class="contact-details">
+
+            <a
+              href="tel:+917204283998"
+              class="contact-item"
+              aria-label="Call Sanjana Kashyap"
+            >
+
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                  19.79 19.79 0 0 1-8.63-3.07
+                  19.5 19.5 0 0 1-6-6
+                  19.79 19.79 0 0 1-3.07-8.67
+                  A2 2 0 0 1 4.11 2h3
+                  a2 2 0 0 1 2 1.72
+                  12.84 12.84 0 0 0 .7 2.81
+                  2 2 0 0 1-.45 2.11L8.09 9.91
+                  a16 16 0 0 0 6 6l1.27-1.27
+                  a2 2 0 0 1 2.11-.45
+                  12.84 12.84 0 0 0 2.81.7
+                  A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+
+              <span class="contact-value">+91 72042 83998</span>
+
+            </a>
+
+            <span class="contact-divider" aria-hidden="true"></span>
+
+            <a
+              href="mailto:sanjanakashyap1015@gmail.com"
+              class="contact-item"
+              aria-label="Email Sanjana Kashyap"
+            >
+
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <polyline points="3,7 12,13 21,7" />
+              </svg>
+
+              <span class="contact-value">
+                sanjanakashyap1015@gmail.com
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 
   <!-- =========================================================
        FOOTER
        ========================================================= -->
 
   <footer>
-
     <div class="container">
       Sanjana Kashyap · Instructional Design Portfolio
     </div>
-
   </footer>
 
-
+</body>
+</html>
