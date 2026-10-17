@@ -225,6 +225,63 @@
       line-height: 1.6;
     }
 
+
+
+    /* =========================================================
+       QUICK ACCESS
+       ========================================================= */
+
+    .quick-access {
+      padding: 24px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E1E3E6;
+    }
+
+    .quick-access-inner {
+      display: grid;
+      grid-template-columns: auto repeat(3, minmax(0, 1fr));
+      align-items: center;
+      gap: 18px;
+    }
+
+    .quick-access-label {
+      color: #59616B;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .quick-access-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-width: 0;
+      padding: 12px 15px;
+      color: #172033;
+      background: #F7F6F2;
+      border: 1px solid #E1E3E6;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.4;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .quick-access-link:hover {
+      color: #236B68;
+      border-color: #AFC7C5;
+    }
+
+    .quick-access-arrow {
+      flex-shrink: 0;
+      color: #2A7F7B;
+      font-size: 17px;
+    }
+
     /* =========================================================
        GENERAL SECTIONS
        ========================================================= */
@@ -908,6 +965,15 @@
         grid-template-columns: minmax(0, 1fr);
       }
 
+      .quick-access-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .quick-access-label {
+        margin-bottom: 2px;
+      }
+
       .project-comparison {
         padding: 60px 0;
       }
@@ -1002,6 +1068,14 @@
 
       .nav-links a {
         font-size: 13px;
+      }
+
+      .quick-access {
+        padding: 20px 0;
+      }
+
+      .quick-access-link {
+        padding: 12px 14px;
       }
 
       .hero {
@@ -1238,6 +1312,38 @@
 
       </div>
     </header>
+
+    <!-- =========================================================
+         QUICK ACCESS
+         ========================================================= -->
+
+    <nav class="quick-access" aria-label="Quick access links">
+      <div class="container quick-access-inner">
+
+        <div class="quick-access-label">Quick Access</div>
+
+        <a class="quick-access-link" href="projects/leadership/index.html">
+          <span>Leadership Readiness</span>
+          <span class="quick-access-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="quick-access-link" href="projects/nexatech/index.html">
+          <span>NexaTech Onboarding</span>
+          <span class="quick-access-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a
+          class="quick-access-link"
+          href="documents/Portfolio%20Evaluation%20and%20Impact%20Plan.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Evaluation &amp; Impact Plan</span>
+          <span class="quick-access-arrow" aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+    </nav>
 
     <!-- =========================================================
          SELECTED WORK
